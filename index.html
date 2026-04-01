@@ -43,12 +43,19 @@
     height: 64px;
   }
   .nav-brand {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.4rem; font-weight: 500;
-    color: var(--white); letter-spacing: 0.04em;
+    display: flex; align-items: center;
     text-decoration: none;
+    height: 100%;
+    padding: 8px 0;
   }
-  .nav-brand span { color: var(--gold); }
+  .nav-brand img {
+    height: 48px; width: auto;
+    display: block;
+    background: #fff;
+    border: 1.5px solid #6b8aad;
+    border-radius: 6px;
+    padding: 4px 10px 4px 6px;
+  }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
   .nav-links a {
     color: var(--ice); font-size: .82rem; text-decoration: none;
@@ -421,7 +428,7 @@
 
 <!-- ── NAVBAR ────────────────────────────────── -->
 <nav>
-  <a href="#" class="nav-brand">Marsic<span>alluminio</span></a>
+  <a href="#" class="nav-brand"><img src="Logo%20Marsicalluminio.svg" alt="Marsicalluminio" /></a>
   <ul class="nav-links">
     <li><a href="#prodotti">Finestre</a></li>
     <li><a href="#porte">Porte</a></li>
