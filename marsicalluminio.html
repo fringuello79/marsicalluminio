@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marsicalluminio S.R.L.S. – Infissi, Finestre & Porte</title>
+<meta name="description" content="Marsicalluminio S.R.L.S. – Commercio, fornitura e installazione di finestre, porte, infissi e serramenti in PVC, alluminio e legno. Roma e tutta Italia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0f1b2d;
+    --steel: #1e3a5f;
+    --sky: #4a7fa5;
+    --ice: #c8dce8;
+    --silver: #e8ecf0;
+    --gold: #b8965a;
+    --white: #f7f9fb;
+    --text: #1a2535;
+    --muted: #6b7a8d;
+    --radius: 2px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ─── NAVBAR ─────────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(15,27,45,0.97);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(184,150,90,0.25);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 500;
+    color: var(--white); letter-spacing: 0.04em;
+    text-decoration: none;
+  }
+  .nav-brand span { color: var(--gold); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: var(--ice); font-size: .82rem; text-decoration: none;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta {
+    background: var(--gold); color: var(--navy);
+    padding: .45rem 1.2rem; border-radius: var(--radius);
+    font-size: .78rem; font-weight: 500; letter-spacing: .08em;
+    text-transform: uppercase; text-decoration: none;
+    transition: opacity .2s;
+  }
+  .nav-cta:hover { opacity: .85; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 24px; height: 2px; background: var(--white); display: block; }
+
+  /* ─── HERO ────────────────────────────────── */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(145deg, var(--navy) 0%, var(--steel) 60%, #1a3a60 100%);
+    position: relative; overflow: hidden;
+    display: flex; align-items: center;
+    padding: 100px 2rem 4rem;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234a7fa5' fill-opacity='0.07'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  /* Decorative window silhouette */
+  .hero-deco {
+    position: absolute; right: -60px; top: 50%; transform: translateY(-50%);
+    width: 680px; height: 680px; opacity: .06;
+  }
+  .hero-content { position: relative; max-width: 680px; }
+  .hero-badge {
+    display: inline-block;
+    border: 1px solid var(--gold); color: var(--gold);
+    font-size: .72rem; letter-spacing: .15em; text-transform: uppercase;
+    padding: .35rem 1rem; margin-bottom: 1.6rem;
+    animation: fadeUp .8s ease both;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.6rem, 5vw, 4.2rem);
+    font-weight: 300; line-height: 1.1;
+    color: var(--white); margin-bottom: 1.4rem;
+    animation: fadeUp .8s .1s ease both;
+  }
+  .hero h1 em { color: var(--gold); font-style: normal; }
+  .hero p {
+    font-size: 1.05rem; color: var(--ice); line-height: 1.75;
+    margin-bottom: 2.4rem; max-width: 520px;
+    animation: fadeUp .8s .2s ease both;
+  }
+  .hero-actions {
+    display: flex; gap: 1rem; flex-wrap: wrap;
+    animation: fadeUp .8s .3s ease both;
+  }
+  .btn-primary {
+    background: var(--gold); color: var(--navy);
+    padding: .8rem 2rem; font-size: .85rem; font-weight: 500;
+    letter-spacing: .06em; text-transform: uppercase;
+    text-decoration: none; border-radius: var(--radius);
+    transition: opacity .2s, transform .2s;
+  }
+  .btn-primary:hover { opacity: .88; transform: translateY(-1px); }
+  .btn-outline {
+    border: 1px solid var(--ice); color: var(--white);
+    padding: .8rem 2rem; font-size: .85rem; font-weight: 400;
+    letter-spacing: .06em; text-transform: uppercase;
+    text-decoration: none; border-radius: var(--radius);
+    transition: background .2s;
+  }
+  .btn-outline:hover { background: rgba(255,255,255,.08); }
+
+  .hero-stats {
+    display: flex; gap: 3rem; margin-top: 4rem;
+    animation: fadeUp .8s .4s ease both;
+    padding-top: 2rem; border-top: 1px solid rgba(200,220,232,.15);
+  }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem; color: var(--gold); line-height: 1;
+  }
+  .stat-lbl { font-size: .75rem; color: var(--ice); letter-spacing: .06em; margin-top: .3rem; }
+
+  /* ─── WINDOW SVG ILLUSTRATIONS ──────────── */
+  .win-svg { width: 100%; height: 100%; }
+
+  /* ─── SECTIONS ────────────────────────────── */
+  section { padding: 5rem 2rem; }
+  .container { max-width: 1160px; margin: 0 auto; }
+  .section-label {
+    font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: .8rem;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 400; color: var(--navy); line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  .section-sub { font-size: 1rem; color: var(--muted); line-height: 1.7; max-width: 560px; }
+  .divider { width: 48px; height: 2px; background: var(--gold); margin: 1.4rem 0; }
+
+  /* ─── FEATURES STRIP ──────────────────────── */
+  .features-strip {
+    background: var(--navy); padding: 3rem 2rem;
+  }
+  .features-grid {
+    max-width: 1160px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;
+  }
+  .feature-item { text-align: center; }
+  .feature-icon {
+    width: 48px; height: 48px; margin: 0 auto 1rem;
+    background: rgba(74,127,165,.2); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .feature-icon svg { width: 22px; height: 22px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+  .feature-item h3 { font-size: .9rem; color: var(--white); font-weight: 500; margin-bottom: .4rem; }
+  .feature-item p { font-size: .8rem; color: var(--ice); line-height: 1.6; }
+
+  /* ─── PRODUCTS ────────────────────────────── */
+  #prodotti { background: var(--white); }
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem; margin-top: 3rem;
+  }
+  .product-card {
+    background: #fff; border: 1px solid #dde4ec;
+    border-radius: 4px; overflow: hidden;
+    transition: transform .25s, box-shadow .25s;
+  }
+  .product-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(15,27,45,.12); }
+  .product-visual {
+    background: var(--silver);
+    height: 220px; display: flex; align-items: center; justify-content: center;
+    padding: 2rem; position: relative; overflow: hidden;
+  }
+  .product-visual::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+    background: var(--gold);
+  }
+  .product-info { padding: 1.6rem; }
+  .product-tag {
+    font-size: .68rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--sky); margin-bottom: .5rem;
+  }
+  .product-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 500; color: var(--navy); margin-bottom: .6rem;
+  }
+  .product-info p { font-size: .85rem; color: var(--muted); line-height: 1.65; margin-bottom: 1rem; }
+  .product-specs { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .spec-pill {
+    font-size: .72rem; padding: .3rem .7rem;
+    background: var(--silver); color: var(--steel);
+    border-radius: 20px; letter-spacing: .04em;
+  }
+
+  /* ─── WINDOW TYPES SVGs ───────────────────── */
+  .svg-window-casement { /* inline */ }
+
+  /* ─── SYSTEMS SECTION ─────────────────────── */
+  #sistemi { background: var(--silver); }
+  .systems-table {
+    width: 100%; border-collapse: collapse; margin-top: 2rem;
+    font-size: .87rem;
+  }
+  .systems-table th {
+    background: var(--navy); color: var(--white);
+    padding: .85rem 1.2rem; text-align: left;
+    font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 400;
+  }
+  .systems-table td {
+    padding: .85rem 1.2rem; border-bottom: 1px solid #dde4ec;
+    vertical-align: middle;
+  }
+  .systems-table tr:last-child td { border-bottom: none; }
+  .systems-table tr:hover td { background: rgba(74,127,165,.05); }
+  .uw-badge {
+    display: inline-block;
+    background: var(--navy); color: var(--gold);
+    font-size: .78rem; padding: .2rem .6rem; border-radius: 3px; font-weight: 500;
+  }
+  .system-good { color: #2a7c4f; font-weight: 500; font-size: .75rem; }
+  .system-best { color: #1a5c38; font-weight: 600; font-size: .75rem; }
+
+  /* ─── GLAZING ─────────────────────────────── */
+  #vetrocamera { background: var(--navy); color: var(--white); }
+  #vetrocamera .section-title { color: var(--white); }
+  #vetrocamera .section-sub { color: var(--ice); }
+  .glass-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .glass-card {
+    border: 1px solid rgba(200,220,232,.2); padding: 1.8rem;
+    border-radius: 4px; transition: border-color .2s;
+  }
+  .glass-card:hover { border-color: var(--gold); }
+  .glass-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; color: var(--white); margin-bottom: .6rem; }
+  .glass-card p { font-size: .82rem; color: var(--ice); line-height: 1.65; }
+
+  /* ─── DOORS SECTION ───────────────────────── */
+  #porte { background: #fff; }
+  .doors-layout {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+    align-items: center; margin-top: 3rem;
+  }
+  .doors-list { list-style: none; }
+  .doors-list li {
+    padding: 1rem 0; border-bottom: 1px solid #dde4ec;
+    display: flex; align-items: flex-start; gap: .8rem;
+    font-size: .9rem; color: var(--text); line-height: 1.6;
+  }
+  .doors-list li::before {
+    content: ''; flex-shrink: 0;
+    width: 6px; height: 6px; background: var(--gold);
+    border-radius: 50%; margin-top: .45rem;
+  }
+  .door-visual {
+    background: var(--silver); border-radius: 4px;
+    height: 400px; display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+
+  /* ─── SLIDING DOORS ───────────────────────── */
+  #scorrevoli { background: var(--silver); }
+  .scorrevoli-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem; margin-top: 3rem;
+  }
+  .scor-card {
+    background: #fff; padding: 2rem; border-radius: 4px;
+    border-left: 3px solid var(--gold);
+  }
+  .scor-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: var(--navy); margin-bottom: .8rem; }
+  .scor-card p { font-size: .85rem; color: var(--muted); line-height: 1.7; }
+
+  /* ─── RENOVATION ──────────────────────────── */
+  #rinnovazione { background: var(--white); }
+  .rinn-box {
+    background: var(--navy); border-radius: 4px;
+    padding: 3rem; margin-top: 3rem;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;
+  }
+  .rinn-box h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--white); margin-bottom: 1rem; }
+  .rinn-box p { font-size: .9rem; color: var(--ice); line-height: 1.7; }
+  .rinn-points { list-style: none; margin-top: 1.5rem; }
+  .rinn-points li { display: flex; gap: .8rem; padding: .6rem 0; color: var(--ice); font-size: .87rem; }
+  .rinn-points li::before { content: '✓'; color: var(--gold); flex-shrink: 0; font-weight: 600; }
+
+  /* ─── WHY US ──────────────────────────────── */
+  #perche { background: var(--silver); }
+  .why-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem; margin-top: 3rem;
+  }
+  .why-card { background: #fff; padding: 2rem; border-radius: 4px; }
+  .why-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem; color: var(--ice); line-height: 1; margin-bottom: .5rem;
+  }
+  .why-card h3 { font-size: 1rem; font-weight: 500; color: var(--navy); margin-bottom: .5rem; }
+  .why-card p { font-size: .84rem; color: var(--muted); line-height: 1.65; }
+
+  /* ─── CONTACT ─────────────────────────────── */
+  #contatti { background: var(--navy); }
+  #contatti .section-title { color: var(--white); }
+  #contatti .section-sub { color: var(--ice); }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+    margin-top: 3rem; align-items: start;
+  }
+  .contact-info { list-style: none; }
+  .contact-info li {
+    display: flex; align-items: flex-start; gap: 1rem;
+    padding: 1.1rem 0; border-bottom: 1px solid rgba(200,220,232,.1);
+    color: var(--ice); font-size: .9rem;
+  }
+  .contact-info li:last-child { border-bottom: none; }
+  .contact-info strong { color: var(--white); display: block; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: .2rem; }
+  .ci-icon { color: var(--gold); font-size: 1.1rem; flex-shrink: 0; margin-top: .1rem; }
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    width: 100%;
+    background: rgba(255,255,255,.06); border: 1px solid rgba(200,220,232,.2);
+    color: var(--white); padding: .8rem 1rem; border-radius: var(--radius);
+    font-family: 'DM Sans', sans-serif; font-size: .87rem;
+    transition: border-color .2s;
+    appearance: none;
+  }
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder { color: rgba(200,220,232,.4); }
+  .contact-form input:focus,
+  .contact-form textarea:focus,
+  .contact-form select:focus {
+    outline: none; border-color: var(--gold);
+  }
+  .contact-form textarea { height: 130px; resize: vertical; }
+  .contact-form option { background: var(--navy); }
+  .btn-submit {
+    background: var(--gold); color: var(--navy); border: none;
+    padding: .85rem 2rem; font-size: .85rem; font-weight: 500;
+    letter-spacing: .06em; text-transform: uppercase;
+    border-radius: var(--radius); cursor: pointer;
+    transition: opacity .2s; align-self: flex-start;
+  }
+  .btn-submit:hover { opacity: .85; }
+
+  /* ─── DISCLAIMER ──────────────────────────── */
+  .disclaimer-bar {
+    background: #0a1520; padding: 1.2rem 2rem;
+    font-size: .73rem; color: rgba(200,220,232,.5); line-height: 1.6;
+    text-align: center;
+  }
+  .disclaimer-bar a { color: var(--gold); text-decoration: none; }
+
+  /* ─── FOOTER ──────────────────────────────── */
+  footer {
+    background: #060e18; padding: 2.5rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem; color: var(--white);
+  }
+  .footer-brand span { color: var(--gold); }
+  .footer-copy { font-size: .75rem; color: var(--muted); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { font-size: .75rem; color: var(--muted); text-decoration: none; }
+  .footer-links a:hover { color: var(--gold); }
+
+  /* ─── ANIMATIONS ──────────────────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .reveal {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity .6s ease, transform .6s ease;
+  }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* ─── RESPONSIVE ──────────────────────────── */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+    .doors-layout, .rinn-box, .contact-grid { grid-template-columns: 1fr; }
+    .door-visual { height: 240px; }
+    .form-row { grid-template-columns: 1fr; }
+    .rinn-box { padding: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAVBAR ────────────────────────────────── -->
+<nav>
+  <a href="#" class="nav-brand">Marsic<span>alluminio</span></a>
+  <ul class="nav-links">
+    <li><a href="#prodotti">Finestre</a></li>
+    <li><a href="#porte">Porte</a></li>
+    <li><a href="#scorrevoli">Scorrevoli</a></li>
+    <li><a href="#rinnovazione">Rinnovazione</a></li>
+    <li><a href="#perche">Chi Siamo</a></li>
+    <li><a href="#contatti">Contatti</a></li>
+  </ul>
+  <a href="#contatti" class="nav-cta">Richiedi Preventivo</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ── HERO ──────────────────────────────────── -->
+<section class="hero" id="home">
+  <!-- decorative large window silhouette -->
+  <svg class="hero-deco" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="20" y="20" width="360" height="360" rx="2" stroke="white" stroke-width="8"/>
+    <rect x="40" y="40" width="148" height="148" rx="1" stroke="white" stroke-width="4"/>
+    <rect x="212" y="40" width="148" height="148" rx="1" stroke="white" stroke-width="4"/>
+    <rect x="40" y="212" width="148" height="148" rx="1" stroke="white" stroke-width="4"/>
+    <rect x="212" y="212" width="148" height="148" rx="1" stroke="white" stroke-width="4"/>
+    <line x1="195" y1="20" x2="195" y2="380" stroke="white" stroke-width="6"/>
+    <line x1="20" y1="195" x2="380" y2="195" stroke="white" stroke-width="6"/>
+  </svg>
+
+  <div class="hero-content container">
+    <div class="hero-badge">Qualità · Efficienza · Affidabilità</div>
+    <h1>Infissi di <em>alta gamma</em><br>per ogni esigenza</h1>
+    <p>Fornitura e installazione di finestre, porte e portefinestre in PVC ad alte prestazioni termiche e acustiche. Soluzioni su misura per residenziale e commerciale in tutta Italia.</p>
+    <div class="hero-actions">
+      <a href="#contatti" class="btn-primary">Richiedi Preventivo Gratuito</a>
+      <a href="#prodotti" class="btn-outline">Scopri i Prodotti</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-num">82<small style="font-size:1rem">mm</small></div>
+        <div class="stat-lbl">Profondità di montaggio max</div>
+      </div>
+      <div>
+        <div class="stat-num">6</div>
+        <div class="stat-lbl">Camere di isolamento</div>
+      </div>
+      <div>
+        <div class="stat-num">0.72</div>
+        <div class="stat-lbl">Uw minimo W/m²K</div>
+      </div>
+      <div>
+        <div class="stat-num">A+</div>
+        <div class="stat-lbl">Classe energetica</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FEATURES STRIP ─────────────────────────── -->
+<div class="features-strip">
+  <div class="features-grid">
+    <div class="feature-item">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <h3>Isolamento Termico</h3>
+      <p>Uw fino a 0,72 W/m²K con vetrocamera triplo e canalina calda</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      </div>
+      <h3>Consegna Rapida</h3>
+      <p>Tempi di produzione e consegna competitivi in tutta Italia</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      </div>
+      <h3>Garanzia & Assistenza</h3>
+      <p>Prodotti garantiti con assistenza post-vendita dedicata</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3>Sicurezza Certificata</h3>
+      <p>Ferramenta di alta qualità, chiusure multi-punto e vetri di sicurezza</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24"><path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+      </div>
+      <h3>Ampia Gamma Colori</h3>
+      <p>Tutta la palette RAL disponibile, bianchi, antracite e legno effetto</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── PRODOTTI – FINESTRE ────────────────────── -->
+<section id="prodotti">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Linea Prodotti</div>
+      <h2 class="section-title">Finestre in PVC<br>ad alto rendimento</h2>
+      <div class="divider"></div>
+      <p class="section-sub">Profili a 5 e 6 camere con sistema MD (3 guarnizioni) e AD (2 guarnizioni). Profilati Classe A con spessore parete ≥ 2,8 mm. Vetrocamera da 24 a 52 mm.</p>
+    </div>
+    <div class="products-grid">
+
+      <!-- BV82 Classic -->
+      <div class="product-card reveal">
+        <div class="product-visual">
+          <svg viewBox="0 0 240 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:200px">
+            <!-- outer frame -->
+            <rect x="10" y="10" width="220" height="200" rx="2" stroke="#1e3a5f" stroke-width="8" fill="#e8ecf0"/>
+            <!-- glazing -->
+            <rect x="22" y="22" width="196" height="176" rx="1" fill="#c8dce8" fill-opacity=".6" stroke="#4a7fa5" stroke-width="2"/>
+            <!-- light reflection -->
+            <polygon points="26,26 80,26 26,70" fill="white" fill-opacity=".3"/>
+            <!-- handle -->
+            <rect x="118" y="100" width="8" height="24" rx="3" fill="#b8965a"/>
+            <rect x="116" y="110" width="12" height="4" rx="2" fill="#b8965a"/>
+            <!-- hinges -->
+            <rect x="14" y="50" width="6" height="20" rx="1" fill="#6b7a8d"/>
+            <rect x="14" y="150" width="6" height="20" rx="1" fill="#6b7a8d"/>
+            <!-- label -->
+            <text x="122" y="210" font-family="sans-serif" font-size="9" fill="#6b7a8d" text-anchor="middle">Sistema 82 mm – 6 Camere</text>
+          </svg>
+        </div>
+        <div class="product-info">
+          <div class="product-tag">Finestra a 6 camere · 82 mm</div>
+          <h3>Linea Classic MD</h3>
+          <p>Profilo da 82 mm con 6 camere di isolamento e sistema MD a 3 guarnizioni. Uw ≈ 0,76 W/m²K con vetrocamera triplo e canalina calda. Classe A.</p>
+          <div class="product-specs">
+            <span class="spec-pill">Uw ~0,76</span>
+            <span class="spec-pill">3 guarnizioni</span>
+            <span class="spec-pill">Vetro 24–48 mm</span>
+            <span class="spec-pill">Classe A</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BV82 Artline -->
+      <div class="product-card reveal">
+        <div class="product-visual">
+          <svg viewBox="0 0 240 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:200px">
+            <rect x="10" y="10" width="220" height="200" rx="2" stroke="#1e3a5f" stroke-width="8" fill="#e8ecf0"/>
+            <!-- double sash -->
+            <rect x="22" y="22" width="95" height="176" rx="1" fill="#c8dce8" fill-opacity=".5" stroke="#4a7fa5" stroke-width="2"/>
+            <rect x="123" y="22" width="95" height="176" rx="1" fill="#c8dce8" fill-opacity=".5" stroke="#4a7fa5" stroke-width="2"/>
+            <polygon points="26,26 66,26 26,60" fill="white" fill-opacity=".3"/>
+            <polygon points="127,26 160,26 127,56" fill="white" fill-opacity=".3"/>
+            <!-- divider mullion -->
+            <rect x="112" y="22" width="16" height="176" fill="#1e3a5f"/>
+            <!-- handle L -->
+            <rect x="99" y="100" width="6" height="22" rx="2" fill="#b8965a"/>
+            <!-- handle R -->
+            <rect x="135" y="100" width="6" height="22" rx="2" fill="#b8965a"/>
+            <text x="122" y="210" font-family="sans-serif" font-size="9" fill="#6b7a8d" text-anchor="middle">Sistema 82 mm – ArtLine</text>
+          </svg>
+        </div>
+        <div class="product-info">
+          <div class="product-tag">Finestra 2 ante · 82 mm</div>
+          <h3>Linea ArtLine MD</h3>
+          <p>Profilo 82 mm Classe A con listelli fermavetro dritti e rotondi. Estetica contemporanea, linee pulite. Ideale per ambienti moderni e ampi vani finestra.</p>
+          <div class="product-specs">
+            <span class="spec-pill">Uw ~0,76</span>
+            <span class="spec-pill">Classe A</span>
+            <span class="spec-pill">3 guarnizioni</span>
+            <span class="spec-pill">Listelli dritti/rotondi</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BV73 Ecoline -->
+      <div class="product-card reveal">
+        <div class="product-visual">
+          <svg viewBox="0 0 240 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:200px">
+            <rect x="10" y="10" width="220" height="200" rx="2" stroke="#1e3a5f" stroke-width="7" fill="#e8ecf0"/>
+            <rect x="21" y="21" width="198" height="178" rx="1" fill="#c8dce8" fill-opacity=".55" stroke="#4a7fa5" stroke-width="2"/>
+            <polygon points="25,25 75,25 25,65" fill="white" fill-opacity=".3"/>
+            <rect x="118" y="98" width="8" height="26" rx="3" fill="#b8965a"/>
+            <rect x="116" y="108" width="12" height="5" rx="2" fill="#b8965a"/>
+            <rect x="13" y="55" width="5" height="18" rx="1" fill="#6b7a8d"/>
+            <rect x="13" y="148" width="5" height="18" rx="1" fill="#6b7a8d"/>
+            <text x="122" y="210" font-family="sans-serif" font-size="9" fill="#6b7a8d" text-anchor="middle">Sistema 73 mm – 5 Camere</text>
+          </svg>
+        </div>
+        <div class="product-info">
+          <div class="product-tag">Finestra a 5 camere · 73 mm</div>
+          <h3>Linea Ecoline AD</h3>
+          <p>Profilo da 73 mm con 5 camere e sistema AD a 2 guarnizioni. Ottimo rapporto qualità/prezzo per ristrutturazioni e nuove costruzioni. Ferramenta activPilot.</p>
+          <div class="product-specs">
+            <span class="spec-pill">Uw ~0,88</span>
+            <span class="spec-pill">2 guarnizioni</span>
+            <span class="spec-pill">Vetro 24–44 mm</span>
+            <span class="spec-pill">activPilot</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Termo Evolution 80 -->
+      <div class="product-card reveal">
+        <div class="product-visual">
+          <svg viewBox="0 0 240 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:200px">
+            <rect x="10" y="10" width="220" height="200" rx="2" stroke="#0f1b2d" stroke-width="9" fill="#dde4ec"/>
+            <rect x="23" y="23" width="194" height="174" rx="1" fill="#c8dce8" fill-opacity=".65" stroke="#4a7fa5" stroke-width="3"/>
+            <!-- triple glass suggestion -->
+            <rect x="30" y="30" width="180" height="160" rx="1" fill="none" stroke="rgba(74,127,165,0.25)" stroke-width="1" stroke-dasharray="3 3"/>
+            <polygon points="27,27 85,27 27,75" fill="white" fill-opacity=".35"/>
+            <rect x="118" y="96" width="9" height="28" rx="4" fill="#b8965a"/>
+            <rect x="116" y="108" width="13" height="5" rx="2" fill="#b8965a"/>
+            <text x="122" y="210" font-family="sans-serif" font-size="9" fill="#6b7a8d" text-anchor="middle">Sistema 80 mm – 6 Camere</text>
+          </svg>
+        </div>
+        <div class="product-info">
+          <div class="product-tag">Finestra premium · 80 mm</div>
+          <h3>Termo Evolution 80 MD</h3>
+          <p>Profilo avanzato da 80 mm, 6 camere, sistema MD a 3 guarnizioni. Uw = 0,72 W/m²K, la migliore trasmittanza della gamma. Vetrocamera fino a 48 mm.</p>
+          <div class="product-specs">
+            <span class="spec-pill">Uw 0,72</span>
+            <span class="spec-pill">6 camere</span>
+            <span class="spec-pill">3 guarnizioni</span>
+            <span class="spec-pill">Top di gamma</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Termo Elegant 76 -->
+      <div class="product-card reveal">
+        <div class="product-visual">
+          <svg viewBox="0 0 240 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:200px">
+            <rect x="10" y="10" width="220" height="200" rx="2" stroke="#1a2535" stroke-width="8" fill="#dde4ec"/>
+            <rect x="22" y="22" width="196" height="176" rx="1" fill="#b8d0e0" fill-opacity=".7" stroke="#4a7fa5" stroke-width="2"/>
+            <polygon points="26,26 82,26 26,72" fill="white" fill-opacity=".4"/>
+            <!-- dark frame accent -->
+            <rect x="10" y="10" width="220" height="15" fill="#1a2535" rx="2"/>
+            <rect x="10" y="195" width="220" height="15" fill="#1a2535"/>
+            <rect x="117" y="95" width="9" height="28" rx="4" fill="#b8965a"/>
+            <rect x="115" y="107" width="13" height="5" rx="2" fill="#b8965a"/>
+            <text x="122" y="210" font-family="sans-serif" font-size="9" fill="#e8ecf0" text-anchor="middle">Termo Elegant 76 mm</text>
+          </svg>
+        </div>
+        <div class="product-info">
+          <div class="product-tag">Finestra design · 76 mm</div>
+          <h3>Termo Elegant 76 MD</h3>
+          <p>Profilo 76 mm con rinforzo termico FORTHEX nel telaio, 6 camere, sistema MD. Uw = 0,73–0,74 W/m²K (versione Premium). Design lineare ideale per abitazioni di pregio.</p>
+          <div class="product-specs">
+            <span class="spec-pill">Uw 0,73–0,74</span>
+            <span class="spec-pill">FORTHEX</span>
+            <span class="spec-pill">Vetro 24–52 mm</span>
+            <span class="spec-pill">Design</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rivestimento Alluminio -->
+      <div class="product-card reveal">
+        <div class="product-visual">
+          <svg viewBox="0 0 240 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:200px">
+            <!-- outer alu cladding -->
+            <rect x="10" y="10" width="220" height="200" rx="2" fill="#6b7a8d" stroke="#3a4a5c" stroke-width="3"/>
+            <!-- inner PVC frame -->
+            <rect x="22" y="22" width="196" height="176" rx="1" fill="#e8ecf0" stroke="#9aabb8" stroke-width="2"/>
+            <!-- glass -->
+            <rect x="34" y="34" width="172" height="152" rx="1" fill="#c8dce8" fill-opacity=".7" stroke="#4a7fa5" stroke-width="1.5"/>
+            <polygon points="38,38 88,38 38,78" fill="white" fill-opacity=".3"/>
+            <!-- handle in antracite -->
+            <rect x="118" y="100" width="9" height="26" rx="4" fill="#3a4a5c"/>
+            <rect x="116" y="111" width="13" height="5" rx="2" fill="#3a4a5c"/>
+            <text x="122" y="210" font-family="sans-serif" font-size="9" fill="#e8ecf0" text-anchor="middle">PVC + Rivestimento Alluminio</text>
+          </svg>
+        </div>
+        <div class="product-info">
+          <div class="product-tag">Bicolore · PVC + Alluminio</div>
+          <h3>Rivestimento in Alluminio</h3>
+          <p>Sistema innovativo che abbina le prestazioni del PVC all'estetica dell'alluminio. Disponibile in tutti i colori RAL con superficie verniciata durevole. Applicabile su sistema 82 mm.</p>
+          <div class="product-specs">
+            <span class="spec-pill">Tutti i RAL</span>
+            <span class="spec-pill">Bicolore</span>
+            <span class="spec-pill">Su sistema 82</span>
+            <span class="spec-pill">Alta durabilità</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SYSTEMS TABLE ───────────────────────────── -->
+<section id="sistemi">
+  <div class="container reveal">
+    <div class="section-label">Comparazione Tecnica</div>
+    <h2 class="section-title">Sistemi a confronto</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Tutti i profili sono in PVC di classe A con rinforzi in acciaio. I valori Uw si riferiscono a finestra referenziale 1230×1480 mm con vetrocamera triplo a bassa emissività e canalina calda.</p>
+    <div style="overflow-x:auto; margin-top:2rem;">
+      <table class="systems-table">
+        <thead>
+          <tr>
+            <th>Sistema</th>
+            <th>Profondità</th>
+            <th>Camere</th>
+            <th>Guarnizioni</th>
+            <th>Uw min</th>
+            <th>Vetrocamera</th>
+            <th>Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Termo Evolution 80 MD</strong></td>
+            <td>80 mm</td>
+            <td>6</td>
+            <td>Sistema MD (3)</td>
+            <td><span class="uw-badge">0,72</span></td>
+            <td>24–48 mm</td>
+            <td class="system-best">⭑ Migliore isolamento</td>
+          </tr>
+          <tr>
+            <td><strong>Termo Elegant 76 Premium MD</strong></td>
+            <td>76 mm</td>
+            <td>6</td>
+            <td>Sistema MD (3)</td>
+            <td><span class="uw-badge">0,73</span></td>
+            <td>24–52 mm</td>
+            <td class="system-best">FORTHEX nel telaio</td>
+          </tr>
+          <tr>
+            <td><strong>Termo Elegant 76 MD</strong></td>
+            <td>76 mm</td>
+            <td>6</td>
+            <td>Sistema MD (3)</td>
+            <td><span class="uw-badge">0,74</span></td>
+            <td>24–52 mm</td>
+            <td class="system-good">Design raffinato</td>
+          </tr>
+          <tr>
+            <td><strong>Linea 82 Classic MD</strong></td>
+            <td>82 mm</td>
+            <td>6</td>
+            <td>Sistema MD (3)</td>
+            <td><span class="uw-badge">0,76</span></td>
+            <td>24–48 mm</td>
+            <td class="system-good">Classe A · ArtLine</td>
+          </tr>
+          <tr>
+            <td><strong>Linea 73 Ecoline AD</strong></td>
+            <td>73 mm</td>
+            <td>5</td>
+            <td>Sistema AD (2)</td>
+            <td><span class="uw-badge">0,88</span></td>
+            <td>24–44 mm</td>
+            <td>activPilot · economica</td>
+          </tr>
+          <tr>
+            <td><strong>Linea 73 Prestige Ecoline</strong></td>
+            <td>73 mm</td>
+            <td>5</td>
+            <td>Sistema AD (2)</td>
+            <td><span class="uw-badge">0,88</span></td>
+            <td>24–44 mm</td>
+            <td>activPilot · estetica premium</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ── VETROCAMERA ─────────────────────────────── -->
+<section id="vetrocamera">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Tecnologia del Vetro</div>
+      <h2 class="section-title">Vetrocamere ad alta efficienza</h2>
+      <div class="divider"></div>
+      <p class="section-sub">Utilizziamo esclusivamente vetrocamere con intercapedine riempita a gas argon, lastre a bassa emissività (Low-E) e distanziatori warm-edge per eliminare i ponti termici al bordo vetro.</p>
+    </div>
+    <div class="glass-grid">
+      <div class="glass-card reveal">
+        <h3>Doppio Vetro</h3>
+        <p>Vetrocamera 4/16/4 o 4/20/4 con gas argon e lastra Low-E. Ug fino a 1,0 W/m²K. Soluzione economica per ristrutturazioni con budget ottimizzato.</p>
+      </div>
+      <div class="glass-card reveal">
+        <h3>Triplo Vetro</h3>
+        <p>Vetrocamera tripla (es. 33.1/14/4/12/33.1) con due lastre Low-E. Ug = 0,5 W/m²K. Massima efficienza termica per edifici a basso consumo e passive house.</p>
+      </div>
+      <div class="glass-card reveal">
+        <h3>Canalina Calda (Warm Edge)</h3>
+        <p>Distanziatore in materiale composito a bassa conduttività che elimina il ponte termico perimetrale. Riduce il rischio di condensa e aumenta le prestazioni reali.</p>
+      </div>
+      <div class="glass-card reveal">
+        <h3>Vetro Sicurezza (VSG)</h3>
+        <p>Lastra stratificata con film plastico interlayer. Obbligatorio per vetrate a pavimento, porte e finestre ribassate secondo le normative UE vigenti. Disponibile su richiesta.</p>
+      </div>
+      <div class="glass-card reveal">
+        <h3>Vetro Acustico</h3>
+        <p>Lastra VSG con intercapedini asimmetriche per abbattimento acustico fino a Rw 46 dB. Ideale per abitazioni in zone con elevato traffico o rumore ambientale.</p>
+      </div>
+      <div class="glass-card reveal">
+        <h3>Vetro Solare e Satinato</h3>
+        <p>Trattamenti superficiali per controllo solare (g-value ridotto), privacy con effetto satinato, acidato o stampato. Personalizzazione estetica senza rinunciare alla performance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PORTE ESTERNE ───────────────────────────── -->
+<section id="porte">
+  <div class="container">
+    <div class="doors-layout">
+      <div class="reveal">
+        <div class="section-label">Porte d'Ingresso</div>
+        <h2 class="section-title">Porte esterne<br>sicure e belle</h2>
+        <div class="divider"></div>
+        <p class="section-sub" style="margin-bottom:1.5rem">Porte in PVC con profondità 73–82 mm, disponibili in configurazione a 1 o 2 ante con apertura interna od esterna. Riempimenti in alluminio (al), vetro (glass) e HPL in oltre 20 modelli.</p>
+        <ul class="doors-list">
+          <li>Chiusure multi-punto (3 punti) con blocchi a gancio per massima sicurezza anti-effrazione</li>
+          <li>Chiavistello standard o automatico a scelta</li>
+          <li>Cerniere standard o nascoste per un look pulito</li>
+          <li>Soglia in alluminio per tenuta ottimale al vento e all'acqua</li>
+          <li>Sistema MD (3 guarnizioni) su profili 82 mm: Ud fino a 0,83 W/m²K</li>
+          <li>Vetrocamera da 24 a 52 mm; possibilità di vetro di sicurezza VSG</li>
+          <li>Gamma colori RAL completa, bianchi, antracite e finiture legno</li>
+        </ul>
+        <a href="#contatti" class="btn-primary" style="display:inline-block;margin-top:2rem">Configura la tua porta</a>
+      </div>
+      <div class="door-visual reveal">
+        <svg viewBox="0 0 220 380" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:190px">
+          <!-- door frame -->
+          <rect x="10" y="10" width="200" height="360" rx="2" fill="#3a4a5c" stroke="#1a2535" stroke-width="6"/>
+          <!-- door panel -->
+          <rect x="22" y="22" width="176" height="336" rx="1" fill="#4a5a6c" stroke="#2a3a4c" stroke-width="2"/>
+          <!-- glass insert -->
+          <rect x="60" y="40" width="100" height="140" rx="1" fill="#c8dce8" fill-opacity=".7" stroke="#6b8aa0" stroke-width="2"/>
+          <polygon points="64,44 100,44 64,76" fill="white" fill-opacity=".3"/>
+          <!-- decorative panel lines -->
+          <rect x="36" y="200" width="148" height="4" rx="1" fill="#2a3a4c"/>
+          <rect x="36" y="220" width="148" height="80" rx="1" fill="none" stroke="#2a3a4c" stroke-width="2"/>
+          <rect x="36" y="315" width="148" height="30" rx="1" fill="none" stroke="#2a3a4c" stroke-width="2"/>
+          <!-- handle -->
+          <rect x="168" y="170" width="10" height="50" rx="4" fill="#b8965a"/>
+          <rect x="156" y="190" width="22" height="8" rx="3" fill="#b8965a"/>
+          <!-- lock cylinder -->
+          <circle cx="160" cy="240" r="6" stroke="#b8965a" stroke-width="2" fill="none"/>
+          <!-- hinges -->
+          <rect x="16" y="60" width="8" height="22" rx="2" fill="#9aabb8"/>
+          <rect x="16" y="290" width="8" height="22" rx="2" fill="#9aabb8"/>
+          <!-- threshold -->
+          <rect x="10" y="368" width="200" height="12" rx="1" fill="#9aabb8"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PORTE SCORREVOLI ────────────────────────── -->
+<section id="scorrevoli">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Grandi Aperture</div>
+      <h2 class="section-title">Porte scorrevoli<br>e portefinestre</h2>
+      <div class="divider"></div>
+      <p class="section-sub">Quattro sistemi distinti per ogni esigenza di luce, dimensione e comfort: dalla soluzione economica a quella con apertura di oltre 6 m.</p>
+    </div>
+    <div class="scorrevoli-grid">
+      <div class="scor-card reveal">
+        <h3>Sistema HST</h3>
+        <p>Lo scorrevole "sollevamento e scorrimento" per grandi dimensioni. Larghezza fino a 6 m, soglia ribassabile quasi a filo pavimento con elemento di scivolo da 5 o 15 mm. Uw = 0,73 W/m²K. Vetrocamera 24–48 mm.</p>
+      </div>
+      <div class="scor-card reveal">
+        <h3>Sistema evolutionDrive Plus+</h3>
+        <p>Elevata tenuta perimetrale grazie alle guarnizioni premute dopo la chiusura. Larghezza max 3,9 m. Uw = 0,69 W/m²K. Soglia alta; ideale quando si privilegia la tenuta all'aria e all'acqua.</p>
+      </div>
+      <div class="scor-card reveal">
+        <h3>Sistema evolutionDrive Jetline / Inline</h3>
+        <p>Scorrevoli leggeri per vani di medie dimensioni. Jetline fino a 3000×2480 mm (6 m²), Inline fino a 3000×1600 mm. Uw = 1,2 W/m²K. Soluzione compatta ed economica.</p>
+      </div>
+      <div class="scor-card reveal">
+        <h3>Sistema PSK</h3>
+        <p>Il più economico della gamma: prima ribalta, poi scorre. Larghezza max 3 m. Disponibile su tutti i profili in PVC del catalogo (82, 73, 80, 76). Unica tipologia con funzione di ribalta. Ferramenta duoPort SK o PAS.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── RINNOVAZIONE ────────────────────────────── -->
+<section id="rinnovazione">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Ristrutturazione</div>
+      <h2 class="section-title">Telaio di rinnovazione:<br>nessun muro, nessun cantiere</h2>
+      <div class="divider"></div>
+      <p class="section-sub">I sistemi di rinnovazione consentono di installare i nuovi serramenti direttamente sul vecchio telaio, eliminando demolizioni e riduzioni di luce al minimo.</p>
+    </div>
+    <div class="rinn-box reveal">
+      <div>
+        <h3>Sostituisci senza demolire</h3>
+        <p style="color:var(--ice);font-size:.9rem;line-height:1.7">Grazie alle alette di rinnovazione da 35, 58 e 60 mm il vecchio telaio viene semplicemente avvolto da quello nuovo. Il risultato è un intervento pulito, rapido e con dispersioni termiche ridotte fin dall'inizio.</p>
+        <ul class="rinn-points">
+          <li>Nessuna demolizione di muri o intonaci</li>
+          <li>Riduzione del ponte termico al telaio</li>
+          <li>Tempi di posa molto ridotti rispetto al metodo tradizionale</li>
+          <li>Disponibile per sistemi 82 mm (aletta 35, 60 mm) e 73 mm (aletta 35, 58 mm)</li>
+          <li>Applicabile anche a porte e portefinestre scorrevoli PSK</li>
+        </ul>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center">
+        <svg viewBox="0 0 260 280" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:220px">
+          <!-- old frame (grey) -->
+          <rect x="10" y="10" width="240" height="260" rx="2" fill="#2a3a4c" stroke="#3a4a5c" stroke-width="4"/>
+          <!-- renovation wing left -->
+          <rect x="10" y="10" width="30" height="260" fill="#b8965a" opacity=".7"/>
+          <!-- renovation wing right -->
+          <rect x="220" y="10" width="30" height="260" fill="#b8965a" opacity=".7"/>
+          <!-- renovation wing top -->
+          <rect x="10" y="10" width="240" height="25" fill="#b8965a" opacity=".7"/>
+          <!-- new frame -->
+          <rect x="40" y="35" width="180" height="235" rx="2" fill="#1e3a5f" stroke="#4a7fa5" stroke-width="3"/>
+          <!-- glass -->
+          <rect x="52" y="47" width="156" height="211" rx="1" fill="#c8dce8" fill-opacity=".6" stroke="#4a7fa5" stroke-width="2"/>
+          <polygon points="56,51 100,51 56,88" fill="white" fill-opacity=".3"/>
+          <!-- handle -->
+          <rect x="118" y="140" width="8" height="24" rx="3" fill="#b8965a"/>
+          <!-- labels -->
+          <rect x="10" y="232" width="30" height="38" fill="#b8965a" opacity=".7"/>
+          <text x="25" y="255" font-family="sans-serif" font-size="7" fill="white" text-anchor="middle">35 mm</text>
+          <text x="130" y="272" font-family="sans-serif" font-size="8" fill="#c8dce8" text-anchor="middle">Nuovo telaio interno</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PERCHÉ NOI ───────────────────────────────── -->
+<section id="perche">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Chi Siamo</div>
+      <h2 class="section-title">Perché scegliere<br>Marsicalluminio</h2>
+      <div class="divider"></div>
+      <p class="section-sub">Marsicalluminio S.R.L.S. è una società specializzata nella commercializzazione e distribuzione di infissi, serramenti e sistemi per l'efficienza energetica in tutta Italia.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-num">01</div>
+        <h3>Selezione accurata dei prodotti</h3>
+        <p>Proponiamo solo profili e sistemi che soddisfano i più stringenti standard europei di isolamento termico e acustico.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-num">02</div>
+        <h3>Consulenza tecnica specializzata</h3>
+        <p>I nostri tecnici vi guidano nella scelta del sistema più adatto: profilo, vetrocamera, colore, ferramenta e tipo di apertura.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-num">03</div>
+        <h3>Preventivi trasparenti</h3>
+        <p>Ogni preventivo è dettagliato e comprende tutte le voci: prodotto, accessori, trasporto e condizioni di pagamento chiare.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-num">04</div>
+        <h3>Efficienza energetica & bonus</h3>
+        <p>I nostri infissi rientrano tra quelli ammissibili alle detrazioni fiscali previste dalla normativa italiana per la riqualificazione energetica degli edifici.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTATTI ────────────────────────────────── -->
+<section id="contatti">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label" style="color:var(--gold)">Parliamo del tuo progetto</div>
+      <h2 class="section-title">Contattaci</h2>
+      <div class="divider"></div>
+      <p class="section-sub">Siamo a disposizione per sopralluoghi, preventivi gratuiti e consulenza tecnica. Rispondiamo entro 24 ore lavorative.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal">
+        <ul class="contact-info">
+          <li>
+            <span class="ci-icon">📞</span>
+            <div>
+              <strong>Commerciale – Alessandro Felli</strong>
+              <a href="tel:+393357584371" style="color:var(--ice);text-decoration:none">+39 335 758 4371</a>
+            </div>
+          </li>
+          <li>
+            <span class="ci-icon">📞</span>
+            <div>
+              <strong>Commerciale – Costantino Alfonsi</strong>
+              <a href="tel:+393771290313" style="color:var(--ice);text-decoration:none">+39 377 129 0313</a>
+            </div>
+          </li>
+          <li>
+            <span class="ci-icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:marsicalluminio@gmail.com" style="color:var(--ice);text-decoration:none">marsicalluminio@gmail.com</a>
+            </div>
+          </li>
+          <li>
+            <span class="ci-icon">🏢</span>
+            <div>
+              <strong>Sede Legale</strong>
+              Via Sesto n. 19 – 00126 Roma (RM)
+            </div>
+          </li>
+          <li>
+            <span class="ci-icon">💼</span>
+            <div>
+              <strong>P.IVA / C.F.</strong>
+              18332371006
+            </div>
+          </li>
+          <li>
+            <span class="ci-icon">🕐</span>
+            <div>
+              <strong>Orari di risposta</strong>
+              Lun–Ven: 9:00–18:00
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="reveal">
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <input type="text" placeholder="Nome e Cognome *" required>
+            <input type="tel" placeholder="Telefono">
+          </div>
+          <input type="email" placeholder="Email *" required>
+          <select>
+            <option value="" disabled selected>Tipo di prodotto di interesse</option>
+            <option>Finestre</option>
+            <option>Porte esterne</option>
+            <option>Porte scorrevoli / HST</option>
+            <option>Rinnovazione su vecchio telaio</option>
+            <option>Portefinestre</option>
+            <option>Altro</option>
+          </select>
+          <textarea placeholder="Descrivi brevemente il tuo progetto: numero di infissi, dimensioni indicative, piano, tipo di edificio…"></textarea>
+          <div style="font-size:.72rem;color:rgba(200,220,232,.45);line-height:1.5">
+            Inviando il modulo acconsenti al trattamento dei dati personali ai sensi del D.Lgs. 196/2003 e del Regolamento UE 679/2016 (GDPR) per la gestione della tua richiesta.
+          </div>
+          <button type="submit" class="btn-submit">Invia Richiesta</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DISCLAIMER LEGALE ───────────────────────── -->
+<div class="disclaimer-bar">
+  <strong style="color:rgba(200,220,232,.7)">Note Legali & Informativa Consumatori</strong><br>
+  I prezzi non sono indicati sul sito; ogni preventivo viene formulato su misura in base a dimensioni, configurazione e quantità. Le prestazioni termiche (Uw, Ug, Uf) indicate sono valori di riferimento calcolati su finestre campione 1230×1480 mm secondo EN ISO 10077 e possono variare in funzione delle dimensioni effettive. L'utilizzo di vetro di sicurezza è obbligatorio nelle situazioni previste dalle normative UE vigenti; il cliente è tenuto a rispettare tali obblighi. I prodotti possono presentare lievi variazioni di tonalità tra lotti diversi. Le detrazioni fiscali per la riqualificazione energetica sono soggette a normativa vigente al momento dell'intervento; Marsicalluminio S.R.L.S. non fornisce consulenza fiscale. Marsicalluminio S.R.L.S. (P.IVA 18332371006) – Registro Imprese di Roma n. REA RM-1778557.
+  Per informazioni sulla privacy: <a href="mailto:marsicalluminio@gmail.com">marsicalluminio@gmail.com</a>
+</div>
+
+<!-- ── FOOTER ──────────────────────────────────── -->
+<footer>
+  <div class="footer-brand">Marsic<span>alluminio</span> S.R.L.S.</div>
+  <div class="footer-copy">© 2025–2026 Marsicalluminio S.R.L.S. – Tutti i diritti riservati</div>
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#prodotti">Prodotti</a>
+    <a href="#contatti">Contatti</a>
+  </div>
+</footer>
+
+<script>
+  // Intersection Observer for reveal animations
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 60);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(el => observer.observe(el));
+
+  // Hamburger menu
+  function toggleMenu() {
+    const nav = document.querySelector('.nav-links');
+    if (nav.style.display === 'flex') {
+      nav.style.display = '';
+      nav.style.position = '';
+    } else {
+      nav.style.display = 'flex';
+      nav.style.flexDirection = 'column';
+      nav.style.position = 'fixed';
+      nav.style.top = '64px';
+      nav.style.left = '0';
+      nav.style.right = '0';
+      nav.style.background = 'rgba(15,27,45,0.98)';
+      nav.style.padding = '1.5rem 2rem';
+      nav.style.gap = '1.2rem';
+      nav.style.zIndex = '99';
+    }
+  }
+
+  // Form submission handler
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.btn-submit');
+    btn.textContent = '✓ Richiesta Inviata';
+    btn.style.background = '#2a7c4f';
+    btn.style.color = '#fff';
+    setTimeout(() => {
+      btn.textContent = 'Invia Richiesta';
+      btn.style.background = '';
+      btn.style.color = '';
+      e.target.reset();
+    }, 3500);
+  }
+</script>
+</body>
+</html>
