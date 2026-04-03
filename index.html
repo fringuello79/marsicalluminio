@@ -1111,7 +1111,8 @@
           btn.disabled = false;
         }, 3500);
       }
-    } catch {
+    } catch (error) {
+      console.error('Form submission error:', error);
       btn.textContent = 'Errore – Riprova';
       btn.style.background = '#8b2020';
       btn.style.color = '#fff';
