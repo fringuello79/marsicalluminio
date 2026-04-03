@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schede Tecniche Profili – Marsicalluminio S.R.L.S.</title>
+<meta name="description" content="Caratteristiche tecniche complete dei 6 profili di infissi in PVC proposti da Marsicalluminio: Classic MD, ArtLine MD, Pro Evolution 72 MD, Termo Evolution 80, Termo Elegant 76 e Termo Elegant 76 Premium.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0f1b2d;
+    --steel: #1e3a5f;
+    --sky: #4a7fa5;
+    --ice: #c8dce8;
+    --silver: #e8ecf0;
+    --gold: #b8965a;
+    --white: #f7f9fb;
+    --text: #1a2535;
+    --muted: #6b7a8d;
+    --radius: 2px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ─── NAVBAR ─────────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(15,27,45,0.97);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(184,150,90,0.25);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+  .nav-brand {
+    display: flex; align-items: center;
+    text-decoration: none;
+    height: 100%;
+    padding: 8px 0;
+  }
+  .nav-brand img {
+    height: 48px; width: auto;
+    display: block;
+    background: #fff;
+    border: 1.5px solid #6b8aad;
+    border-radius: 6px;
+    padding: 4px 10px 4px 6px;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    color: var(--ice); font-size: .82rem; text-decoration: none;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta {
+    background: var(--gold); color: var(--navy);
+    padding: .45rem 1.2rem; border-radius: var(--radius);
+    font-size: .78rem; font-weight: 500; letter-spacing: .08em;
+    text-transform: uppercase; text-decoration: none;
+    transition: opacity .2s;
+  }
+  .nav-cta:hover { opacity: .85; }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 24px; height: 2px; background: var(--white); display: block; }
+
+  /* ─── HERO INTRO ──────────────────────────── */
+  .tech-hero {
+    background: linear-gradient(145deg, var(--navy) 0%, var(--steel) 60%, #1a3a60 100%);
+    padding: 120px 2rem 5rem;
+    text-align: center;
+  }
+  .tech-hero .hero-badge {
+    display: inline-block;
+    border: 1px solid var(--gold); color: var(--gold);
+    font-size: .72rem; letter-spacing: .15em; text-transform: uppercase;
+    padding: .35rem 1rem; margin-bottom: 1.6rem;
+  }
+  .tech-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 300; color: var(--white);
+    margin-bottom: 1rem; line-height: 1.2;
+  }
+  .tech-hero h1 em { color: var(--gold); font-style: normal; }
+  .tech-hero p {
+    font-size: 1rem; color: var(--ice); line-height: 1.75;
+    max-width: 620px; margin: 0 auto 2rem;
+  }
+  .back-btn {
+    display: inline-flex; align-items: center; gap: .5rem;
+    border: 1px solid var(--ice); color: var(--white);
+    padding: .7rem 1.6rem; font-size: .82rem; letter-spacing: .06em;
+    text-transform: uppercase; text-decoration: none; border-radius: var(--radius);
+    transition: background .2s;
+  }
+  .back-btn:hover { background: rgba(255,255,255,.08); }
+
+  /* ─── TOC / QUICK NAV ─────────────────────── */
+  .toc-strip {
+    background: var(--navy);
+    border-top: 1px solid rgba(184,150,90,0.2);
+    border-bottom: 1px solid rgba(184,150,90,0.2);
+    padding: 1rem 2rem;
+    overflow-x: auto;
+  }
+  .toc-inner {
+    max-width: 1160px; margin: 0 auto;
+    display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;
+  }
+  .toc-label {
+    font-size: .7rem; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--gold); flex-shrink: 0; margin-right: .5rem;
+  }
+  .toc-link {
+    font-size: .78rem; color: var(--ice); text-decoration: none;
+    padding: .35rem .9rem; border: 1px solid rgba(200,220,232,.2);
+    border-radius: 20px; white-space: nowrap;
+    transition: background .2s, color .2s, border-color .2s;
+  }
+  .toc-link:hover { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+
+  /* ─── GENERAL LAYOUT ──────────────────────── */
+  .container { max-width: 1160px; margin: 0 auto; }
+  .section-label {
+    font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: .8rem;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 400; color: var(--navy); line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  .section-sub { font-size: .95rem; color: var(--muted); line-height: 1.75; max-width: 700px; }
+  .divider { width: 48px; height: 2px; background: var(--gold); margin: 1.2rem 0 1.8rem; }
+
+  /* ─── PROFILE SECTIONS ────────────────────── */
+  .profile-section {
+    padding: 5rem 2rem;
+    scroll-margin-top: 64px;
+  }
+  .profile-section:nth-child(odd) { background: var(--white); }
+  .profile-section:nth-child(even) { background: var(--silver); }
+
+  .profile-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: start;
+    margin-top: 2.5rem;
+  }
+
+  /* ─── PRODUCT IMAGE ───────────────────────── */
+  .profile-img-wrap {
+    background: #fff;
+    border: 1px solid #dde4ec;
+    border-radius: 4px;
+    overflow: hidden;
+    position: sticky;
+    top: 80px;
+  }
+  .profile-img-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .profile-img-caption {
+    background: var(--navy);
+    color: var(--ice);
+    font-size: .78rem;
+    padding: .75rem 1rem;
+    text-align: center;
+    letter-spacing: .04em;
+  }
+
+  /* ─── SPEC TABLE ──────────────────────────── */
+  .spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .87rem;
+    margin-bottom: 2rem;
+  }
+  .spec-table th {
+    background: var(--navy); color: var(--white);
+    padding: .75rem 1rem; text-align: left;
+    font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 400;
+    width: 42%;
+  }
+  .spec-table td {
+    padding: .75rem 1rem; border-bottom: 1px solid #dde4ec;
+    vertical-align: middle; color: var(--text);
+  }
+  .spec-table tr:last-child td { border-bottom: none; }
+  .spec-table tr:hover td { background: rgba(74,127,165,.04); }
+  .uw-badge {
+    display: inline-block;
+    background: var(--navy); color: var(--gold);
+    font-size: .82rem; padding: .2rem .6rem; border-radius: 3px; font-weight: 600;
+  }
+  .badge-best { background: #1a4a28; }
+  .badge-great { background: var(--steel); }
+
+  /* ─── FEATURE LIST ────────────────────────── */
+  .feature-list { list-style: none; margin-bottom: 2rem; }
+  .feature-list li {
+    display: flex; align-items: flex-start; gap: .8rem;
+    padding: .65rem 0; border-bottom: 1px solid rgba(0,0,0,.06);
+    font-size: .9rem; color: var(--text); line-height: 1.6;
+  }
+  .feature-list li:last-child { border-bottom: none; }
+  .feature-list li::before {
+    content: ''; flex-shrink: 0;
+    width: 6px; height: 6px; background: var(--gold);
+    border-radius: 50%; margin-top: .5rem;
+  }
+
+  /* ─── TAG PILLS ───────────────────────────── */
+  .tag-row { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.5rem; }
+  .tag-pill {
+    font-size: .72rem; padding: .3rem .8rem;
+    background: var(--silver); color: var(--steel);
+    border-radius: 20px; letter-spacing: .04em;
+    border: 1px solid #dde4ec;
+  }
+  .tag-pill-gold {
+    background: rgba(184,150,90,.12); color: var(--gold);
+    border: 1px solid rgba(184,150,90,.3);
+  }
+
+  /* ─── INFO BOX ────────────────────────────── */
+  .info-box {
+    background: var(--navy); color: var(--ice);
+    border-radius: 4px; padding: 1.5rem 1.8rem;
+    margin-bottom: 1.5rem;
+    font-size: .88rem; line-height: 1.7;
+  }
+  .info-box strong { color: var(--gold); }
+
+  /* ─── SECTION HEADING ─────────────────────── */
+  .profile-header { margin-bottom: 0; }
+  .profile-header .section-label { margin-bottom: .6rem; }
+
+  /* ─── SUBSECTION TITLE ────────────────────── */
+  .sub-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem; font-weight: 500;
+    color: var(--navy); margin-bottom: .8rem; margin-top: 1.6rem;
+  }
+
+  /* ─── OPENINGS GRID ───────────────────────── */
+  .openings-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem; margin-bottom: 1.5rem;
+  }
+  .opening-card {
+    background: #fff; border: 1px solid #dde4ec;
+    border-radius: 4px; padding: 1rem; text-align: center;
+  }
+  .opening-card svg { width: 52px; height: 52px; margin-bottom: .5rem; }
+  .opening-card span { font-size: .78rem; color: var(--muted); display: block; }
+
+  /* ─── CTA STRIP ───────────────────────────── */
+  .cta-inline {
+    display: inline-flex; align-items: center; gap: .5rem;
+    background: var(--gold); color: var(--navy);
+    padding: .7rem 1.6rem; font-size: .82rem; font-weight: 500;
+    letter-spacing: .06em; text-transform: uppercase;
+    text-decoration: none; border-radius: var(--radius);
+    transition: opacity .2s;
+    margin-top: .5rem;
+  }
+  .cta-inline:hover { opacity: .85; }
+
+  /* ─── COMPARISON TABLE STRIP ──────────────── */
+  .compare-section {
+    background: var(--navy);
+    padding: 5rem 2rem;
+  }
+  .compare-section .section-title { color: var(--white); }
+  .compare-section .section-sub { color: var(--ice); }
+  .compare-table {
+    width: 100%; border-collapse: collapse;
+    font-size: .87rem; margin-top: 2rem;
+  }
+  .compare-table th {
+    background: rgba(255,255,255,.07); color: var(--gold);
+    padding: .85rem 1.1rem; text-align: left;
+    font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 400;
+    border-bottom: 1px solid rgba(200,220,232,.15);
+  }
+  .compare-table td {
+    padding: .85rem 1.1rem;
+    border-bottom: 1px solid rgba(200,220,232,.08);
+    color: var(--ice); vertical-align: middle;
+  }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table tr:hover td { background: rgba(74,127,165,.07); }
+  .compare-table a { color: var(--ice); text-decoration: none; }
+  .compare-table a:hover { color: var(--gold); }
+  .compare-table strong { color: var(--white); }
+
+  /* ─── FOOTER ──────────────────────────────── */
+  footer {
+    background: #060e18; padding: 2.5rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--white); }
+  .footer-brand span { color: var(--gold); }
+  .footer-copy { font-size: .75rem; color: var(--muted); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { font-size: .75rem; color: var(--muted); text-decoration: none; }
+  .footer-links a:hover { color: var(--gold); }
+
+  /* ─── RESPONSIVE ──────────────────────────── */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    .profile-layout { grid-template-columns: 1fr; gap: 2rem; }
+    .profile-img-wrap { position: static; }
+    .openings-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAVBAR ────────────────────────────────── -->
+<nav>
+  <a href="index.html" class="nav-brand"><img src="Logo%20Marsicalluminio.svg" alt="Marsicalluminio" /></a>
+  <ul class="nav-links">
+    <li><a href="index.html#prodotti">Finestre</a></li>
+    <li><a href="index.html#porte">Porte</a></li>
+    <li><a href="index.html#scorrevoli">Scorrevoli</a></li>
+    <li><a href="index.html#rinnovazione">Rinnovazione</a></li>
+    <li><a href="index.html#perche">Chi Siamo</a></li>
+    <li><a href="index.html#contatti">Contatti</a></li>
+  </ul>
+  <a href="index.html#contatti" class="nav-cta">Richiedi Preventivo</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ── HERO ──────────────────────────────────── -->
+<div class="tech-hero">
+  <div class="hero-badge">Documentazione Tecnica</div>
+  <h1>Schede Tecniche<br><em>Profili Finestre in PVC</em></h1>
+  <p>Caratteristiche tecniche complete dei 6 profili di infissi selezionati da Marsicalluminio: prestazioni termiche, dimensioni, sistemi di guarnizioni e tipologie di vetrocamera.</p>
+  <a href="index.html" class="back-btn">← Torna alla home</a>
+</div>
+
+<!-- ── QUICK NAV ─────────────────────────────── -->
+<div class="toc-strip">
+  <div class="toc-inner">
+    <span class="toc-label">Vai a:</span>
+    <a href="#classic-md" class="toc-link">Classic MD 82</a>
+    <a href="#artline-md" class="toc-link">ArtLine MD 82</a>
+    <a href="#pro-evolution-72" class="toc-link">Pro Evolution 72 MD</a>
+    <a href="#termo-evolution-80" class="toc-link">Termo Evolution 80</a>
+    <a href="#termo-elegant-76" class="toc-link">Termo Elegant 76</a>
+    <a href="#termo-elegant-76-premium" class="toc-link">Termo Elegant 76 Premium</a>
+    <a href="#confronto" class="toc-link">Confronto Sistemi</a>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     PROFILO 1 – CLASSIC MD 82mm
+     ══════════════════════════════════════════ -->
+<section class="profile-section" id="classic-md">
+  <div class="container">
+    <div class="profile-header">
+      <div class="section-label">Profilo 1 di 6</div>
+      <h2 class="section-title">Linea Classic MD 82</h2>
+      <div class="divider"></div>
+      <p class="section-sub">Il profilo universale da 82 mm con 6 camere di isolamento e sistema MD a 3 guarnizioni. La scelta ideale per nuove costruzioni e ristrutturazioni che richiedono elevate prestazioni termiche e affidabilità a lungo termine.</p>
+    </div>
+
+    <div class="profile-layout">
+      <!-- Image -->
+      <div>
+        <div class="profile-img-wrap">
+          <img src="Infimmagini/ClassicMD.png" alt="Linea Classic MD 82mm">
+          <div class="profile-img-caption">Linea Classic MD – Profilo 82 mm / 6 camere</div>
+        </div>
+      </div>
+
+      <!-- Details -->
+      <div>
+        <div class="tag-row">
+          <span class="tag-pill">82 mm</span>
+          <span class="tag-pill">6 camere</span>
+          <span class="tag-pill">Sistema MD</span>
+          <span class="tag-pill tag-pill-gold">Classe A</span>
+          <span class="tag-pill">3 guarnizioni</span>
+        </div>
+
+        <h3 class="sub-heading">Dati tecnici principali</h3>
+        <table class="spec-table">
+          <tr><th>Profondità di montaggio</th><td>82 mm</td></tr>
+          <tr><th>Numero di camere</th><td>6 camere di isolamento</td></tr>
+          <tr><th>Sistema di tenuta</th><td>MD – 3 guarnizioni (perimetrale mediana)</td></tr>
+          <tr><th>Uw finestra rif. (1230×1480 mm)</th><td><span class="uw-badge">≈ 0,76 W/m²K</span> con triplo vetro + canalina calda</td></tr>
+          <tr><th>Spessore vetrocamera accettato</th><td>24 – 48 mm</td></tr>
+          <tr><th>Classe profilo (EN 12608)</th><td>Classe A – spessore parete ≥ 2,8 mm</td></tr>
+          <tr><th>Rinforzo metallico</th><td>Acciaio zincato inserito nelle camere portanti</td></tr>
+          <tr><th>Sistemi di rinnovazione compatibili</th><td>Alette di rinnovazione 35 mm e 60 mm</td></tr>
+          <tr><th>Ferramenta compatibile</th><td>activPilot, duoPort SK, PAS</td></tr>
+        </table>
+
+        <h3 class="sub-heading">Tipologie di apertura</h3>
+        <div class="openings-grid">
+          <div class="opening-card">
+            <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="4" width="44" height="44" rx="1" stroke="#1e3a5f" stroke-width="3" fill="#e8ecf0"/>
+              <rect x="8" y="8" width="36" height="36" rx="1" fill="#c8dce8" fill-opacity=".6" stroke="#4a7fa5" stroke-width="1.5"/>
+              <path d="M26 26 L8 8" stroke="#b8965a" stroke-width="1.5" stroke-dasharray="3 2"/>
+            </svg>
+            <span>Anta e Ribalta</span>
+          </div>
+          <div class="opening-card">
+            <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="4" width="44" height="44" rx="1" stroke="#1e3a5f" stroke-width="3" fill="#e8ecf0"/>
+              <rect x="8" y="8" width="36" height="36" rx="1" fill="#c8dce8" fill-opacity=".6" stroke="#4a7fa5" stroke-width="1.5"/>
+              <path d="M26 26 L26 48" stroke="#b8965a" stroke-width="1.5" stroke-dasharray="3 2"/>
+            </svg>
+            <span>Solo Ribalta</span>
+          </div>
+          <div class="opening-card">
+            <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="4" width="44" height="44" rx="1" stroke="#1e3a5f" stroke-width="3" fill="#c8dce8" fill-opacity=".6"/>
+              <line x1="4" y1="26" x2="48" y2="26" stroke="#4a7fa5" stroke-width="1.5"/>
+              <line x1="26" y1="4" x2="26" y2="48" stroke="#4a7fa5" stroke-width="1.5"/>
+            </svg>
+            <span>Fisso (FK)</span>
+          </div>
+          <div class="opening-card">
+            <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="4" width="44" height="44" rx="1" stroke="#1e3a5f" stroke-width="3" fill="#e8ecf0"/>
+              <rect x="8" y="8" width="36" height="36" rx="1" fill="#c8dce8" fill-opacity=".6" stroke="#4a7fa5" stroke-width="1.5"/>
+              <path d="M8 26 L44 26" stroke="#b8965a" stroke-width="1.5" stroke-dasharray="4 2"/>
+              <polygon points="40,22 48,26 40,30" fill="#b8965a"/>
+            </svg>
+            <span>Scorrevole PSK</span>
+          </div>
+        </div>
+
+        <h3 class="sub-heading">Caratteristiche costruttive</h3>
+        <ul class="feature-list">
+          <li>Profilo PVC con 6 camere aria che interrompono i ponti termici lungo l'intero perimetro del telaio</li>
+          <li>Sistema MD con guarnizione centrale mediana aggiuntiva: tenuta superiore ad aria, acqua e vento rispetto al sistema AD a 2 guarnizioni</li>
+          <li>Listello fermavetro con guarnizione coestrusiva integrata per una tenuta ottimale del vetrocamera</li>
+          <li>Rinforzo in acciaio zincato inserito nelle camere strutturali: garantisce robustezza e stabilità dimensionale nel tempo</li>
+          <li>Possibilità di applicare rivestimento in alluminio esterno su entrambe le ante e il telaio per una finitura bicolore</li>
+          <li>Compatible con sistemi di ventilazione integrata (microventilazione)</li>
+          <li>Omologazione per utilizzo in zone climatiche da A a F (tutte le zone italiane)</li>
+        </ul>
+
+        <h3 class="sub-heading">Vetrocamere consigliate</h3>
+        <div class="info-box">
+          <strong>Doppio vetro:</strong> 4/16/4 con gas argon e lastra Low-E → Ug ≈ 1,0 W/m²K<br>
+          <strong>Triplo vetro:</strong> 4/14/4/12/4 con due lastre Low-E e argon → Ug ≈ 0,5 W/m²K<br>
+          <strong>Con canalina calda (Warm Edge):</strong> riduzione del ponte termico perimetrale e abbattimento del rischio condensa<br>
+          <strong>Vetrocamera max accettata:</strong> 48 mm — consente l'impiego di vetri acustici e di sicurezza VSG
+        </div>
+
+        <h3 class="sub-heading">Colori e finiture</h3>
+        <ul class="feature-list">
+          <li>Bianco standard (RAL 9016) come colore base di produzione</li>
+          <li>Foliatura in tutti i colori RAL e nelle principali finiture effetto legno (rovere, douglas, noce)</li>
+          <li>Antracite (RAL 7016 / RAL 7021) – tra le finiture più richieste</li>
+          <li>Possibilità di bicolore: colore diverso lato interno e lato esterno</li>
+        </ul>
+
+        <a href="index.html#contatti" class="cta-inline">Richiedi Preventivo →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PROFILO 2 – ARTLINE MD 82mm
+     ══════════════════════════════════════════ -->
+<section class="profile-section" id="artline-md">
+  <div class="container">
+    <div class="profile-header">
+      <div class="section-label">Profilo 2 di 6</div>
+      <h2 class="section-title">Linea ArtLine MD 82</h2>
+      <div class="divider"></div>
+      <p class="section-sub">Variante estetica del sistema 82 mm con listelli fermavetro dritti e rotondi intercambiabili. Offre le stesse eccellenti prestazioni termiche del Classic MD con un design contemporaneo e linee pulite, ideale per ambienti moderni e ampie vetrate.</p>
+    </div>
+
+    <div class="profile-layout">
+      <div>
+        <div class="profile-img-wrap">
+          <img src="Infimmagini/ArtlineMD.png" alt="Linea ArtLine MD 82mm">
+          <div class="profile-img-caption">Linea ArtLine MD – Profilo 82 mm / Design contemporaneo</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="tag-row">
+          <span class="tag-pill">82 mm</span>
+          <span class="tag-pill">6 camere</span>
+          <span class="tag-pill">Sistema MD</span>
+          <span class="tag-pill tag-pill-gold">Classe A</span>
+          <span class="tag-pill">Design Lineare</span>
+        </div>
+
+        <h3 class="sub-heading">Dati tecnici principali</h3>
+        <table class="spec-table">
+          <tr><th>Profondità di montaggio</th><td>82 mm</td></tr>
+          <tr><th>Numero di camere</th><td>6 camere di isolamento</td></tr>
+          <tr><th>Sistema di tenuta</th><td>MD – 3 guarnizioni (perimetrale mediana)</td></tr>
+          <tr><th>Uw finestra rif. (1230×1480 mm)</th><td><span class="uw-badge">≈ 0,76 W/m²K</span> con triplo vetro + canalina calda</td></tr>
+          <tr><th>Spessore vetrocamera accettato</th><td>24 – 48 mm</td></tr>
+          <tr><th>Classe profilo (EN 12608)</th><td>Classe A – spessore parete ≥ 2,8 mm</td></tr>
+          <tr><th>Listello fermavetro</th><td>Dritto e tondo (intercambiabili)</td></tr>
+          <tr><th>Rinforzo metallico</th><td>Acciaio zincato</td></tr>
+          <tr><th>Ferramenta compatibile</th><td>activPilot, duoPort SK, PAS</td></tr>
+        </table>
+
+        <h3 class="sub-heading">Differenze rispetto al Classic MD</h3>
+        <ul class="feature-list">
+          <li>Listelli fermavetro in versione dritta (profilo piatto) e tonda (profilo arrotondato), selezionabili in base alle preferenze estetiche</li>
+          <li>Il listello dritto conferisce un aspetto minimalista e moderno, particolarmente apprezzato in architetture contemporanee</li>
+          <li>Il listello tondo offre un richiamo classico con linee morbide, adatto a restauri e abitazioni in stile tradizionale</li>
+          <li>Stessa base tecnica del Classic MD: identica profondità 82 mm, 6 camere e sistema MD a 3 guarnizioni</li>
+          <li>Identiche prestazioni termiche: Uw ≈ 0,76 W/m²K con vetrocamera triplo e canalina calda</li>
+        </ul>
+
+        <h3 class="sub-heading">Caratteristiche costruttive</h3>
+        <ul class="feature-list">
+          <li>Profilo PVC a 6 camere con sistema MD: tenuta superiore ad aria, acqua e permeabilità al vento</li>
+          <li>Adatto per vani finestra di grandi dimensioni grazie al rinforzo in acciaio dimensionabile</li>
+          <li>Compatibile con finestre a 2 ante (apertura contrapposta o parallela) e portefinestre</li>
+          <li>Possibilità di rivestimento in alluminio esterno per finitura bicolore su misura</li>
+          <li>Applicabile in configurazioni fisse (FK), anta-ribalta, a ribalta e scorrevole PSK</li>
+        </ul>
+
+        <h3 class="sub-heading">Applicazioni tipiche</h3>
+        <div class="info-box">
+          <strong>Grandi superfici vetrate</strong> — grazie alla robustezza strutturale, l'ArtLine si presta a finestre di grandi dimensioni con ante fino a 130×230 cm.<br><br>
+          <strong>Ambienti residenziali moderni</strong> — il design pulito si integra perfettamente con interni minimalisti e facciate architettoniche contemporanee.<br><br>
+          <strong>Portefinestre a 2 ante</strong> — la versione a 2 ante è tra le più richieste grazie all'aspetto curato e alle ottime prestazioni di tenuta.
+        </div>
+
+        <a href="index.html#contatti" class="cta-inline">Richiedi Preventivo →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PROFILO 3 – PRO EVOLUTION 72 MD / ECOLINE AD
+     ══════════════════════════════════════════ -->
+<section class="profile-section" id="pro-evolution-72">
+  <div class="container">
+    <div class="profile-header">
+      <div class="section-label">Profilo 3 di 6</div>
+      <h2 class="section-title">Pro Evolution 72 MD<br><small style="font-size:.7em;color:var(--muted)">/ Ecoline AD 73</small></h2>
+      <div class="divider"></div>
+      <p class="section-sub">Profilo da 72–73 mm con 5 camere di isolamento e sistema AD a 2 guarnizioni. Offre un ottimo rapporto qualità/prezzo, rendendolo la scelta ideale per ristrutturazioni, edilizia residenziale e commerciale con vincoli di budget.</p>
+    </div>
+
+    <div class="profile-layout">
+      <div>
+        <div class="profile-img-wrap">
+          <img src="Infimmagini/ProEvolution72MD.png" alt="Pro Evolution 72 MD">
+          <div class="profile-img-caption">Pro Evolution 72 MD – 5 camere / Sistema AD</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="tag-row">
+          <span class="tag-pill">72–73 mm</span>
+          <span class="tag-pill">5 camere</span>
+          <span class="tag-pill">Sistema AD</span>
+          <span class="tag-pill">2 guarnizioni</span>
+          <span class="tag-pill tag-pill-gold">activPilot</span>
+        </div>
+
+        <h3 class="sub-heading">Dati tecnici principali</h3>
+        <table class="spec-table">
+          <tr><th>Profondità di montaggio</th><td>72–73 mm</td></tr>
+          <tr><th>Numero di camere</th><td>5 camere di isolamento</td></tr>
+          <tr><th>Sistema di tenuta</th><td>AD – 2 guarnizioni (perimetrale esterna e interna)</td></tr>
+          <tr><th>Uw finestra rif. (1230×1480 mm)</th><td><span class="uw-badge">≈ 0,88 W/m²K</span> con triplo vetro + canalina calda</td></tr>
+          <tr><th>Spessore vetrocamera accettato</th><td>24 – 44 mm</td></tr>
+          <tr><th>Sistemi di rinnovazione compatibili</th><td>Alette di rinnovazione 35 mm e 58 mm</td></tr>
+          <tr><th>Ferramenta standard</th><td>activPilot (Winkhaus)</td></tr>
+          <tr><th>Ferramenta opzionale</th><td>duoPort SK, PAS</td></tr>
+          <tr><th>Versioni disponibili</th><td>Ecoline AD (standard) – Prestige Ecoline (estetica premium)</td></tr>
+        </table>
+
+        <h3 class="sub-heading">Versioni del sistema</h3>
+        <div class="info-box">
+          <strong>Pro Evolution 72 MD / Ecoline AD:</strong> versione standard con ottime prestazioni termiche per il suo range di profondità. Soluzione economica per nuove costruzioni e ristrutturazioni.<br><br>
+          <strong>Prestige Ecoline:</strong> variante con un'estetica più curata (listelli e profili con sezioni più sottili), mantenendo le stesse prestazioni tecniche del modello base. Ideale per abitazioni che richiedono un aspetto più raffinato pur restando in un range di costo contenuto.
+        </div>
+
+        <h3 class="sub-heading">Caratteristiche costruttive</h3>
+        <ul class="feature-list">
+          <li>Profilo a 5 camere con sistema AD (2 guarnizioni): soluzione consolidata e di alta affidabilità per il segmento residenziale</li>
+          <li>Ferramenta activPilot di Winkhaus: sistema a perimetro continuo con chiusura multi-punto integrata per sicurezza e tenuta ottimale</li>
+          <li>Rinforzo in acciaio zincato nelle camere strutturali per stabilità dimensionale e resistenza alle deformazioni</li>
+          <li>Alette di rinnovazione da 35 e 58 mm: consente installazione su vecchio telaio senza demolizioni</li>
+          <li>Compatibile con portefinestre scorrevoli PSK</li>
+          <li>Profondità ridotta (73 mm vs 82 mm) ideale per muri sottili o quando si vuole ridurre l'ingombro del serramento</li>
+        </ul>
+
+        <h3 class="sub-heading">Applicazioni tipiche</h3>
+        <ul class="feature-list">
+          <li>Ristrutturazioni di edifici residenziali con necessità di contenimento dei costi</li>
+          <li>Edilizia commerciale e uffici con standard termici buoni ma non elevati</li>
+          <li>Sostituzione rapida su telaio esistente grazie alle alette di rinnovazione</li>
+          <li>Zona climatica B–D: prestazioni pienamente adeguate alle zone a clima temperato</li>
+        </ul>
+
+        <a href="index.html#contatti" class="cta-inline">Richiedi Preventivo →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PROFILO 4 – TERMO EVOLUTION 80 MD
+     ══════════════════════════════════════════ -->
+<section class="profile-section" id="termo-evolution-80">
+  <div class="container">
+    <div class="profile-header">
+      <div class="section-label">Profilo 4 di 6</div>
+      <h2 class="section-title">Termo Evolution 80 MD</h2>
+      <div class="divider"></div>
+      <p class="section-sub">Il top di gamma della linea: 80 mm di profondità, 6 camere di isolamento e sistema MD a 3 guarnizioni. Raggiunge il miglior valore di trasmittanza dell'intera gamma con Uw = 0,72 W/m²K, rendendolo la scelta d'eccellenza per edifici a basso consumo energetico e passive house.</p>
+    </div>
+
+    <div class="profile-layout">
+      <div>
+        <div class="profile-img-wrap">
+          <img src="Infimmagini/Termoevolution80.png" alt="Termo Evolution 80 MD">
+          <div class="profile-img-caption">Termo Evolution 80 MD – Top di gamma / Uw 0,72 W/m²K</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="tag-row">
+          <span class="tag-pill">80 mm</span>
+          <span class="tag-pill">6 camere</span>
+          <span class="tag-pill">Sistema MD</span>
+          <span class="tag-pill tag-pill-gold">Classe A</span>
+          <span class="tag-pill tag-pill-gold">Top di gamma</span>
+          <span class="tag-pill">Uw 0,72</span>
+        </div>
+
+        <h3 class="sub-heading">Dati tecnici principali</h3>
+        <table class="spec-table">
+          <tr><th>Profondità di montaggio</th><td>80 mm</td></tr>
+          <tr><th>Numero di camere</th><td>6 camere di isolamento</td></tr>
+          <tr><th>Sistema di tenuta</th><td>MD – 3 guarnizioni (perimetrale mediana)</td></tr>
+          <tr><th>Uw finestra rif. (1230×1480 mm)</th><td><span class="uw-badge badge-best">0,72 W/m²K</span> — migliore della gamma</td></tr>
+          <tr><th>Spessore vetrocamera accettato</th><td>24 – 48 mm</td></tr>
+          <tr><th>Classe profilo (EN 12608)</th><td>Classe A – spessore parete ≥ 2,8 mm</td></tr>
+          <tr><th>Rinforzo metallico</th><td>Acciaio zincato nelle camere portanti</td></tr>
+          <tr><th>Classe energetica finestra</th><td>A+ con vetrocamera triplo ottimizzato</td></tr>
+          <tr><th>Ferramenta compatibile</th><td>activPilot, duoPort SK, PAS, activPilot Select</td></tr>
+        </table>
+
+        <h3 class="sub-heading">Perché il Termo Evolution 80 è il migliore della gamma</h3>
+        <div class="info-box">
+          <strong>Uw 0,72 W/m²K:</strong> grazie alla combinazione di profondità 80 mm, 6 camere e sistema MD a 3 guarnizioni, il Termo Evolution 80 raggiunge la più bassa trasmittanza della linea. Con un vetrocamera triplo (Ug 0,5 W/m²K) e canalina calda, supera i requisiti degli edifici a quasi zero energia (NZEB) previsti dalla normativa europea.<br><br>
+          <strong>Profondità ottimizzata:</strong> 80 mm rappresenta il punto di equilibrio tra spessore delle camere e compattezza del profilo, massimizzando le camere isolanti senza esagerare con l'ingombro del telaio.
+        </div>
+
+        <h3 class="sub-heading">Caratteristiche costruttive</h3>
+        <ul class="feature-list">
+          <li>6 camere di isolamento che interrompono efficacemente i percorsi di dispersione termica del telaio</li>
+          <li>Sistema MD: la terza guarnizione mediana agisce come barriera aggiuntiva contro infiltrazioni d'aria, acqua e vento, con prestazioni di tenuta di categoria superiore</li>
+          <li>Compatibile con vetrocamere fino a 48 mm: permette l'uso di triplo vetro standard e vetri acustici ad alto abbattimento</li>
+          <li>Listello fermavetro con guarnizione coestrusiva: elimina ponti termici al bordo vetro e assicura una tenuta duratura nel tempo</li>
+          <li>Certificazione per le più severe zone climatiche italiane (zona E e F) e per edifici passivi</li>
+          <li>Ampia compatibilità con ferramenta professionale di ultima generazione, incluso il sistema activPilot Select per ante pesanti</li>
+        </ul>
+
+        <h3 class="sub-heading">Applicazioni consigliate</h3>
+        <ul class="feature-list">
+          <li>Edifici NZEB (nearly zero energy building) e passive house</li>
+          <li>Nuove costruzioni in zone climatiche E e F (Appennino, Alpi, Nord Italia)</li>
+          <li>Ristrutturazioni con incentivo energetico (Ecobonus, Superbonus): il valore Uw 0,72 soddisfa i requisiti più stringenti</li>
+          <li>Abitazioni di pregio dove la massima efficienza termica è prioritaria</li>
+        </ul>
+
+        <a href="index.html#contatti" class="cta-inline">Richiedi Preventivo →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PROFILO 5 – TERMO ELEGANT 76 MD
+     ══════════════════════════════════════════ -->
+<section class="profile-section" id="termo-elegant-76">
+  <div class="container">
+    <div class="profile-header">
+      <div class="section-label">Profilo 5 di 6</div>
+      <h2 class="section-title">Termo Elegant 76 MD</h2>
+      <div class="divider"></div>
+      <p class="section-sub">Profilo da 76 mm con 6 camere e sistema MD a 3 guarnizioni. Design raffinato con linee sobrie e silenziose che lo rendono particolarmente adatto ad abitazioni di pregio. Accetta la vetrocamera più spessa della gamma (52 mm), aprendosi a vetri acustici e di sicurezza di grandi spessori.</p>
+    </div>
+
+    <div class="profile-layout">
+      <div>
+        <div>
+          <div class="profile-img-wrap" style="margin-bottom:1rem">
+            <img src="Infimmagini/TermoElegant76.png" alt="Termo Elegant 76 MD">
+            <div class="profile-img-caption">Termo Elegant 76 MD – Design raffinato / Uw 0,74 W/m²K</div>
+          </div>
+          <div class="profile-img-wrap">
+            <img src="Infimmagini/Sistema termo elegant LUX Optima.png" alt="Sistema Termo Elegant LUX Optima">
+            <div class="profile-img-caption">Variante LUX Optima – Vista profilo completa</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="tag-row">
+          <span class="tag-pill">76 mm</span>
+          <span class="tag-pill">6 camere</span>
+          <span class="tag-pill">Sistema MD</span>
+          <span class="tag-pill tag-pill-gold">Classe A</span>
+          <span class="tag-pill">Design</span>
+          <span class="tag-pill">Vetro fino 52 mm</span>
+        </div>
+
+        <h3 class="sub-heading">Dati tecnici principali</h3>
+        <table class="spec-table">
+          <tr><th>Profondità di montaggio</th><td>76 mm</td></tr>
+          <tr><th>Numero di camere</th><td>6 camere di isolamento</td></tr>
+          <tr><th>Sistema di tenuta</th><td>MD – 3 guarnizioni (perimetrale mediana)</td></tr>
+          <tr><th>Uw finestra rif. (1230×1480 mm)</th><td><span class="uw-badge badge-great">0,74 W/m²K</span> con triplo vetro + canalina calda</td></tr>
+          <tr><th>Spessore vetrocamera accettato</th><td>24 – 52 mm — massimo della gamma</td></tr>
+          <tr><th>Classe profilo (EN 12608)</th><td>Classe A</td></tr>
+          <tr><th>Rinforzo termico</th><td>Standard (senza FORTHEX)</td></tr>
+          <tr><th>Variante disponibile</th><td>LUX Optima (vetrocamera ottimizzata per luce naturale)</td></tr>
+          <tr><th>Ferramenta compatibile</th><td>activPilot, duoPort SK, PAS</td></tr>
+        </table>
+
+        <h3 class="sub-heading">Punto di forza: vetrocamera fino a 52 mm</h3>
+        <div class="info-box">
+          <strong>52 mm di vetrocamera accettata</strong> — nessun altro profilo della gamma arriva a questo spessore. Ciò consente di montare:<br>
+          • Vetrocamere acustiche asimmetriche (es. 44.2/16/4/16/33.1) per abbattimento Rw &gt; 48 dB<br>
+          • Vetri di sicurezza VSG di grandi spessori per finestre a pavimento o in zone sismiche<br>
+          • Triplo vetro con intercapedini extra per Ug fino a 0,4 W/m²K<br><br>
+          <strong>Variante LUX Optima:</strong> profilo studiato per ottimizzare la quantità di luce naturale trasmessa all'interno, riducendo al minimo i battenti visibili e massimizzando la superficie trasparente.
+        </div>
+
+        <h3 class="sub-heading">Caratteristiche costruttive</h3>
+        <ul class="feature-list">
+          <li>Profilo con linee sobrie e sezioni visibili ridotte, per un aspetto elegante e non invasivo</li>
+          <li>6 camere di isolamento con sistema MD a 3 guarnizioni: prestazioni di tenuta di categoria superiore</li>
+          <li>Capacità di accogliere vetrocamere molto spesse (fino a 52 mm) grazie a listelli fermavetro rinforzati</li>
+          <li>Design adatto sia ad abitazioni classiche che contemporanee</li>
+          <li>Compatibile con tutti i sistemi di apertura: anta-ribalta, ribalta, fisso, PSK</li>
+          <li>Possibilità di rivestimento in alluminio esterno per finitura bicolore</li>
+        </ul>
+
+        <h3 class="sub-heading">Differenza rispetto alla versione Premium</h3>
+        <ul class="feature-list">
+          <li>Il Termo Elegant 76 MD standard raggiunge Uw 0,74 W/m²K (versione senza FORTHEX)</li>
+          <li>La versione Premium (con rinforzo termico FORTHEX nel telaio) migliora la trasmittanza del telaio (Uf) portando l'Uw della finestra a 0,73 W/m²K</li>
+          <li>Per i dettagli sulla versione Premium si rimanda alla scheda dedicata</li>
+        </ul>
+
+        <a href="index.html#contatti" class="cta-inline">Richiedi Preventivo →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PROFILO 6 – TERMO ELEGANT 76 PREMIUM MD
+     ══════════════════════════════════════════ -->
+<section class="profile-section" id="termo-elegant-76-premium">
+  <div class="container">
+    <div class="profile-header">
+      <div class="section-label">Profilo 6 di 6</div>
+      <h2 class="section-title">Termo Elegant 76 <em style="color:var(--gold);font-style:normal">Premium</em> MD</h2>
+      <div class="divider"></div>
+      <p class="section-sub">La versione più performante del Termo Elegant 76: integra il rinforzo termico esclusivo <strong>FORTHEX</strong> nel telaio fisso, riducendo ulteriormente la trasmittanza del telaio (Uf) e portando l'Uw della finestra completa a 0,73 W/m²K. Design di pregio con prestazioni da edificio passivo.</p>
+    </div>
+
+    <div class="profile-layout">
+      <div>
+        <div class="profile-img-wrap">
+          <img src="Infimmagini/TermoElegant76 Premium.png" alt="Termo Elegant 76 Premium MD">
+          <div class="profile-img-caption">Termo Elegant 76 Premium MD – FORTHEX / Uw 0,73 W/m²K</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="tag-row">
+          <span class="tag-pill">76 mm</span>
+          <span class="tag-pill">6 camere</span>
+          <span class="tag-pill">Sistema MD</span>
+          <span class="tag-pill tag-pill-gold">FORTHEX</span>
+          <span class="tag-pill tag-pill-gold">Uw 0,73</span>
+          <span class="tag-pill">Vetro fino 52 mm</span>
+        </div>
+
+        <h3 class="sub-heading">Dati tecnici principali</h3>
+        <table class="spec-table">
+          <tr><th>Profondità di montaggio</th><td>76 mm</td></tr>
+          <tr><th>Numero di camere</th><td>6 camere di isolamento</td></tr>
+          <tr><th>Sistema di tenuta</th><td>MD – 3 guarnizioni (perimetrale mediana)</td></tr>
+          <tr><th>Uw finestra rif. (1230×1480 mm)</th><td><span class="uw-badge badge-great">0,73 W/m²K</span> con triplo vetro + canalina calda</td></tr>
+          <tr><th>Spessore vetrocamera accettato</th><td>24 – 52 mm — massimo della gamma</td></tr>
+          <tr><th>Classe profilo (EN 12608)</th><td>Classe A</td></tr>
+          <tr><th>Rinforzo termico telaio</th><td><strong>FORTHEX</strong> — inserto isolante ad alta efficienza nel telaio fisso</td></tr>
+          <tr><th>Miglioramento vs versione standard</th><td>Uw 0,74 → 0,73 W/m²K grazie a Uf ridotto</td></tr>
+          <tr><th>Ferramenta compatibile</th><td>activPilot, duoPort SK, PAS, activPilot Select</td></tr>
+        </table>
+
+        <h3 class="sub-heading">Tecnologia FORTHEX</h3>
+        <div class="info-box">
+          <strong>FORTHEX</strong> è un inserto termoisolante integrato nel profilo del telaio fisso che riduce la conduttività del telaio (Uf) rispetto alla versione standard del Termo Elegant 76. Nei serramenti, il telaio costituisce una percentuale significativa della superficie totale (tipicamente 20–30%): migliorarne le prestazioni ha un impatto diretto e misurabile sull'Uw complessivo della finestra.<br><br>
+          L'effetto pratico è un abbattimento di circa 0,01 W/m²K rispetto alla versione senza FORTHEX (Uw da 0,74 → 0,73 W/m²K), con un beneficio energetico annuo apprezzabile in edifici con grande superficie finestrata.
+        </div>
+
+        <h3 class="sub-heading">Caratteristiche costruttive</h3>
+        <ul class="feature-list">
+          <li>Identica geometria esteriore e design della versione Termo Elegant 76 MD standard</li>
+          <li>Rinforzo FORTHEX inserito nella camera principale del telaio fisso: non visibile dall'esterno, non influisce sull'estetica</li>
+          <li>6 camere di isolamento con sistema MD a 3 guarnizioni: prestazioni di tenuta di categoria superiore</li>
+          <li>Accetta vetrocamere fino a 52 mm: massima flessibilità per vetri acustici, di sicurezza e triplo vetro ad alta performance</li>
+          <li>Compatibile con rivestimento in alluminio esterno per finitura bicolore</li>
+          <li>Idoneo per edifici che devono rispettare requisiti Ecobonus/Superbonus con Uw ≤ 1,40 W/m²K (ampiamente soddisfatto) e per i bandi più restrittivi che richiedono Uw ≤ 0,80 W/m²K</li>
+        </ul>
+
+        <h3 class="sub-heading">Applicazioni consigliate</h3>
+        <ul class="feature-list">
+          <li>Abitazioni di pregio e residenze private di alta qualità dove si cerca il massimo del comfort termico con un design elegante</li>
+          <li>Ristrutturazioni con detrazione energetica: Uw 0,73 soddisfa anche i requisiti più stringenti dei decreti CAM</li>
+          <li>Edifici in zone climatiche E e F dove ogni decimo di W/m²K fa la differenza nel bilancio energetico annuale</li>
+          <li>Interventi su facciate esposte a Nord dove la dispersione attraverso i serramenti è massima</li>
+        </ul>
+
+        <a href="index.html#contatti" class="cta-inline">Richiedi Preventivo →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     TABELLA DI CONFRONTO RIEPILOGATIVA
+     ══════════════════════════════════════════ -->
+<section class="compare-section" id="confronto">
+  <div class="container">
+    <div class="section-label" style="color:var(--gold)">Riepilogo</div>
+    <h2 class="section-title">Confronto tra i 6 profili</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Tutti i profili sono in PVC di classe A con rinforzi in acciaio zincato. I valori Uw sono calcolati su finestra referenziale 1230×1480 mm con vetrocamera triplo a bassa emissività e canalina calda (EN ISO 10077).</p>
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Sistema</th>
+            <th>Profondità</th>
+            <th>Camere</th>
+            <th>Guarnizioni</th>
+            <th>Uw min</th>
+            <th>Vetrocamera</th>
+            <th>Punto di forza</th>
+            <th>Scheda</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Termo Evolution 80 MD</strong></td>
+            <td>80 mm</td>
+            <td>6</td>
+            <td>MD (3)</td>
+            <td><span class="uw-badge badge-best">0,72</span></td>
+            <td>24–48 mm</td>
+            <td>Migliore isolamento della gamma</td>
+            <td><a href="#termo-evolution-80">↑ Leggi</a></td>
+          </tr>
+          <tr>
+            <td><strong>Termo Elegant 76 Premium MD</strong></td>
+            <td>76 mm</td>
+            <td>6</td>
+            <td>MD (3)</td>
+            <td><span class="uw-badge badge-great">0,73</span></td>
+            <td>24–52 mm</td>
+            <td>FORTHEX nel telaio · vetro 52 mm</td>
+            <td><a href="#termo-elegant-76-premium">↑ Leggi</a></td>
+          </tr>
+          <tr>
+            <td><strong>Termo Elegant 76 MD</strong></td>
+            <td>76 mm</td>
+            <td>6</td>
+            <td>MD (3)</td>
+            <td><span class="uw-badge">0,74</span></td>
+            <td>24–52 mm</td>
+            <td>Design raffinato · vetro 52 mm</td>
+            <td><a href="#termo-elegant-76">↑ Leggi</a></td>
+          </tr>
+          <tr>
+            <td><strong>Classic MD 82</strong></td>
+            <td>82 mm</td>
+            <td>6</td>
+            <td>MD (3)</td>
+            <td><span class="uw-badge">0,76</span></td>
+            <td>24–48 mm</td>
+            <td>Classe A · rinnovazione 35/60</td>
+            <td><a href="#classic-md">↑ Leggi</a></td>
+          </tr>
+          <tr>
+            <td><strong>ArtLine MD 82</strong></td>
+            <td>82 mm</td>
+            <td>6</td>
+            <td>MD (3)</td>
+            <td><span class="uw-badge">0,76</span></td>
+            <td>24–48 mm</td>
+            <td>Listelli dritti/rotondi · estetica moderna</td>
+            <td><a href="#artline-md">↑ Leggi</a></td>
+          </tr>
+          <tr>
+            <td><strong>Pro Evolution 72 MD / Ecoline AD</strong></td>
+            <td>72–73 mm</td>
+            <td>5</td>
+            <td>AD (2)</td>
+            <td><span class="uw-badge">0,88</span></td>
+            <td>24–44 mm</td>
+            <td>Miglior rapporto qualità/prezzo</td>
+            <td><a href="#pro-evolution-72">↑ Leggi</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:2rem;text-align:center">
+      <a href="index.html#contatti" class="cta-inline">Richiedi un preventivo personalizzato →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────────────── -->
+<footer>
+  <div class="footer-brand">Marsic<span>alluminio</span> S.R.L.S.</div>
+  <div class="footer-copy">© 2025–2026 Marsicalluminio S.R.L.S. – Tutti i diritti riservati</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#prodotti">Prodotti</a>
+    <a href="index.html#contatti">Contatti</a>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector('.nav-links');
+    if (nav.style.display === 'flex') {
+      nav.style.display = '';
+      nav.style.position = '';
+    } else {
+      nav.style.display = 'flex';
+      nav.style.flexDirection = 'column';
+      nav.style.position = 'fixed';
+      nav.style.top = '64px';
+      nav.style.left = '0';
+      nav.style.right = '0';
+      nav.style.background = 'rgba(15,27,45,0.98)';
+      nav.style.padding = '1.5rem 2rem';
+      nav.style.gap = '1.2rem';
+      nav.style.zIndex = '99';
+    }
+  }
+</script>
+</body>
+</html>
