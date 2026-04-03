@@ -189,6 +189,9 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem; margin-top: 3rem;
   }
+  a.product-card {
+    display: block; text-decoration: none; color: inherit;
+  }
   .product-card {
     background: #fff; border: 1px solid #dde4ec;
     border-radius: 4px; overflow: hidden;
@@ -221,6 +224,14 @@
     background: var(--silver); color: var(--steel);
     border-radius: 20px; letter-spacing: .04em;
   }
+  .product-tech-link {
+    display: inline-block; margin-top: .8rem;
+    font-size: .75rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--sky); text-decoration: none;
+    border-bottom: 1px solid var(--sky);
+    transition: color .2s, border-color .2s;
+  }
+  .product-tech-link:hover { color: var(--gold); border-color: var(--gold); }
 
   /* ─── WINDOW TYPES SVGs ───────────────────── */
   .svg-window-casement { /* inline */ }
@@ -539,7 +550,7 @@
     <div class="products-grid">
 
       <!-- BV82 Classic -->
-      <div class="product-card reveal">
+      <a href="tech.html#classic-md" class="product-card reveal">
         <div class="product-visual">
           <img src="Infimmagini/ClassicMD.png" alt="Linea Classic MD" style="max-height:100%;max-width:100%;object-fit:contain;">
         </div>
@@ -553,11 +564,12 @@
             <span class="spec-pill">Vetro 24–48 mm</span>
             <span class="spec-pill">Classe A</span>
           </div>
+          <span class="product-tech-link">Specifiche tecniche →</span>
         </div>
-      </div>
+      </a>
 
       <!-- BV82 Artline -->
-      <div class="product-card reveal">
+      <a href="tech.html#artline-md" class="product-card reveal">
         <div class="product-visual">
           <img src="Infimmagini/ArtlineMD.png" alt="Linea Artline MD" style="max-height:100%;max-width:100%;object-fit:contain;">
         </div>
@@ -571,29 +583,31 @@
             <span class="spec-pill">3 guarnizioni</span>
             <span class="spec-pill">Listelli dritti/rotondi</span>
           </div>
+          <span class="product-tech-link">Specifiche tecniche →</span>
         </div>
-      </div>
+      </a>
 
       <!-- Termo Elegant 76 Premium -->
-      <div class="product-card reveal">
+      <a href="tech.html#termo-elegant-76-premium" class="product-card reveal">
         <div class="product-visual">
           <img src="Infimmagini/TermoElegant76%20Premium.png" alt="Termo Elegant 76 Premium" style="max-height:100%;max-width:100%;object-fit:contain;">
         </div>
         <div class="product-info">
           <div class="product-tag">Finestra premium · 76 mm</div>
           <h3>Termo Elegant 76 Premium</h3>
-          <p>Profilo da 76 mm con rinforzo termico FORTHEX nel telaio e nell'anta, 6 camere, sistema MD a 3 guarnizioni. Uw = 0,73 W/m²K con vetrocamera triplo. Design raffinato per abitazioni di pregio.</p>
+          <p>Profilo da 76 mm con rinforzo termico FORTHEX nel telaio fisso, 6 camere, sistema MD a 3 guarnizioni. Uw = 0,73 W/m²K con vetrocamera triplo. Design raffinato per abitazioni di pregio.</p>
           <div class="product-specs">
             <span class="spec-pill">Uw 0,73</span>
             <span class="spec-pill">FORTHEX</span>
             <span class="spec-pill">Vetro 24–52 mm</span>
             <span class="spec-pill">Premium</span>
           </div>
+          <span class="product-tech-link">Specifiche tecniche →</span>
         </div>
-      </div>
+      </a>
 
       <!-- Termo Evolution 80 -->
-      <div class="product-card reveal">
+      <a href="tech.html#termo-evolution-80" class="product-card reveal">
         <div class="product-visual">
           <img src="Infimmagini/Termoevolution80.png" alt="Termo Evolution 80" style="max-height:100%;max-width:100%;object-fit:contain;">
         </div>
@@ -607,56 +621,47 @@
             <span class="spec-pill">3 guarnizioni</span>
             <span class="spec-pill">Top di gamma</span>
           </div>
+          <span class="product-tech-link">Specifiche tecniche →</span>
         </div>
-      </div>
+      </a>
 
       <!-- Termo Elegant 76 -->
-      <div class="product-card reveal">
+      <a href="tech.html#termo-elegant-76" class="product-card reveal">
         <div class="product-visual">
           <img src="Infimmagini/TermoElegant76.png" alt="Termo Elegant 76" style="max-height:100%;max-width:100%;object-fit:contain;">
         </div>
         <div class="product-info">
           <div class="product-tag">Finestra design · 76 mm</div>
           <h3>Termo Elegant 76 MD</h3>
-          <p>Profilo 76 mm con rinforzo termico FORTHEX nel telaio, 6 camere, sistema MD. Uw = 0,73–0,74 W/m²K (versione Premium). Design lineare ideale per abitazioni di pregio.</p>
+          <p>Profilo 76 mm con 6 camere, sistema MD a 3 guarnizioni. Uw = 0,74 W/m²K con vetrocamera triplo. Design lineare con vetrocamera accettata fino a 52 mm per vetri acustici e di sicurezza.</p>
           <div class="product-specs">
-            <span class="spec-pill">Uw 0,73–0,74</span>
-            <span class="spec-pill">FORTHEX</span>
+            <span class="spec-pill">Uw 0,74</span>
+            <span class="spec-pill">6 camere</span>
             <span class="spec-pill">Vetro 24–52 mm</span>
             <span class="spec-pill">Design</span>
           </div>
+          <span class="product-tech-link">Specifiche tecniche →</span>
         </div>
-      </div>
+      </a>
 
-      <!-- Rivestimento Alluminio -->
-      <div class="product-card reveal">
+      <!-- Pro Evolution 72 MD -->
+      <a href="tech.html#pro-evolution-72" class="product-card reveal">
         <div class="product-visual">
-          <svg viewBox="0 0 240 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:200px">
-            <!-- outer alu cladding -->
-            <rect x="10" y="10" width="220" height="200" rx="2" fill="#6b7a8d" stroke="#3a4a5c" stroke-width="3"/>
-            <!-- inner PVC frame -->
-            <rect x="22" y="22" width="196" height="176" rx="1" fill="#e8ecf0" stroke="#9aabb8" stroke-width="2"/>
-            <!-- glass -->
-            <rect x="34" y="34" width="172" height="152" rx="1" fill="#c8dce8" fill-opacity=".7" stroke="#4a7fa5" stroke-width="1.5"/>
-            <polygon points="38,38 88,38 38,78" fill="white" fill-opacity=".3"/>
-            <!-- handle in antracite -->
-            <rect x="118" y="100" width="9" height="26" rx="4" fill="#3a4a5c"/>
-            <rect x="116" y="111" width="13" height="5" rx="2" fill="#3a4a5c"/>
-            <text x="122" y="210" font-family="sans-serif" font-size="9" fill="#e8ecf0" text-anchor="middle">PVC + Rivestimento Alluminio</text>
-          </svg>
+          <img src="Infimmagini/ProEvolution72MD.png" alt="Pro Evolution 72 MD" style="max-height:100%;max-width:100%;object-fit:contain;">
         </div>
         <div class="product-info">
-          <div class="product-tag">Bicolore · PVC + Alluminio</div>
-          <h3>Rivestimento in Alluminio</h3>
-          <p>Sistema innovativo che abbina le prestazioni del PVC all'estetica dell'alluminio. Disponibile in tutti i colori RAL con superficie verniciata durevole. Applicabile su sistema 82 mm.</p>
+          <div class="product-tag">Finestra economica · 72–73 mm</div>
+          <h3>Pro Evolution 72 MD</h3>
+          <p>Profilo da 72–73 mm con 5 camere di isolamento e sistema AD a 2 guarnizioni. Uw ≈ 0,88 W/m²K. Ottimo rapporto qualità/prezzo per ristrutturazioni e edilizia residenziale.</p>
           <div class="product-specs">
-            <span class="spec-pill">Tutti i RAL</span>
-            <span class="spec-pill">Bicolore</span>
-            <span class="spec-pill">Su sistema 82</span>
-            <span class="spec-pill">Alta durabilità</span>
+            <span class="spec-pill">Uw ~0,88</span>
+            <span class="spec-pill">5 camere</span>
+            <span class="spec-pill">Sistema AD</span>
+            <span class="spec-pill">Vetro 24–44 mm</span>
           </div>
+          <span class="product-tech-link">Specifiche tecniche →</span>
         </div>
-      </div>
+      </a>
 
     </div>
   </div>
