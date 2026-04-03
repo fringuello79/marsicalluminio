@@ -1005,11 +1005,12 @@
       </div>
       <div class="reveal">
         <form class="contact-form" action="https://formspree.io/f/xwpovegp" method="POST" onsubmit="handleSubmit(event)">
+          <input type="hidden" name="_replyto" id="_replyto">
           <div class="form-row">
             <input type="text" name="nome" placeholder="Nome e Cognome *" required>
             <input type="tel" name="telefono" placeholder="Telefono">
           </div>
-          <input type="email" name="email" placeholder="Email *" required>
+          <input type="email" name="email" placeholder="Email *" required oninput="document.getElementById('_replyto').value=this.value">
           <select name="prodotto">
             <option value="" disabled selected>Tipo di prodotto di interesse</option>
             <option>Finestre</option>
@@ -1086,8 +1087,19 @@
     e.preventDefault();
     const form = e.target;
     const btn = form.querySelector('.btn-submit');
+    const originalText = btn.textContent;
     btn.textContent = 'Invio in corso…';
     btn.disabled = true;
+
+    function resetBtn(text, bg, color, delay) {
+      setTimeout(() => {
+        btn.textContent = text || originalText;
+        btn.style.background = bg || '';
+        btn.style.color = color || '';
+        btn.disabled = false;
+      }, delay || 3500);
+    }
+
     try {
       const response = await fetch(form.action, {
         method: 'POST',
@@ -1099,34 +1111,22 @@
         btn.style.background = '#2a7c4f';
         btn.style.color = '#fff';
         form.reset();
-        setTimeout(() => {
-          btn.textContent = 'Invia Richiesta';
-          btn.style.background = '';
-          btn.style.color = '';
-          btn.disabled = false;
-        }, 3500);
+        resetBtn(originalText, '', '', 4000);
       } else {
+        const data = await response.json().catch(() => ({}));
+        const msg = (data.errors && data.errors.map(err => err.message).join(', ')) || 'Errore – Riprova';
+        console.error('Formspree error:', msg);
         btn.textContent = 'Errore – Riprova';
         btn.style.background = '#8b2020';
         btn.style.color = '#fff';
-        setTimeout(() => {
-          btn.textContent = 'Invia Richiesta';
-          btn.style.background = '';
-          btn.style.color = '';
-          btn.disabled = false;
-        }, 3500);
+        resetBtn(originalText, '', '', 3500);
       }
     } catch (error) {
       console.error('Form submission error:', error);
       btn.textContent = 'Errore – Riprova';
       btn.style.background = '#8b2020';
       btn.style.color = '#fff';
-      setTimeout(() => {
-        btn.textContent = 'Invia Richiesta';
-        btn.style.background = '';
-        btn.style.color = '';
-        btn.disabled = false;
-      }, 3500);
+      resetBtn(originalText, '', '', 3500);
     }
   }
 </script>
