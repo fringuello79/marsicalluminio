@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Marsica Alluminio"><g class="mark"><defs><radialGradient id="sg" cx="35%" cy="30%" r="80%"><stop offset="0" stop-color="#438ab5"/><stop offset="1" stop-color="#1e71ac"/></radialGradient><clipPath id="sc"><circle cx="60" cy="60" r="35.5"/></clipPath></defs>
+<g class="blades" style="transform-origin:60px 60px"><path class="blade" fill="#142b54" d="M35.03,7.65 A58 58 0 0 1 98.43,16.56 Q115.45,37.08 99.87,69.57 A41 41 0 0 0 84.39,27.04 Q60.57,0 35.03,7.65Z"/><path class="blade" fill="#2e7d1f" d="M102.07,20.08 A58 58 0 0 1 113.19,83.13 Q98.94,105.65 63.22,100.87 A41 41 0 0 0 98.88,73.01 Q117.24,42 102.07,20.08Z"/><path class="blade" fill="#6d6f73" d="M110.97,87.68 A58 58 0 0 1 54.44,117.73 Q28.61,111.14 22.12,75.69 A41 41 0 0 0 59.64,101 Q94.81,108.87 110.97,87.68Z"/><path class="blade" fill="#1e71ac" d="M49.43,117.03 A58 58 0 0 1 3.37,72.55 Q1.67,45.95 33.37,28.82 A41 41 0 0 0 20.9,72.33 Q24.28,108.21 49.43,117.03Z"/><path class="blade" fill="#2e7d1f" d="M2.5,67.57 A58 58 0 0 1 30.56,10.03 Q55.33,0.18 81.42,25.04 A41 41 0 0 0 36.19,26.62 Q3.11,40.92 2.5,67.57Z"/></g>
+<circle cx="60" cy="60" r="35.5" fill="url(#sg)"/>
+<path clip-path="url(#sc)" d="M30 24.5V95.5M24.5 30H95.5M37.5 24.5V95.5M24.5 37.5H95.5M45 24.5V95.5M24.5 45H95.5M52.5 24.5V95.5M24.5 52.5H95.5M60 24.5V95.5M24.5 60H95.5M67.5 24.5V95.5M24.5 67.5H95.5M75 24.5V95.5M24.5 75H95.5M82.5 24.5V95.5M24.5 82.5H95.5M90 24.5V95.5M24.5 90H95.5" stroke="#fff" stroke-opacity=".16" stroke-width=".8"/>
+<g class="win" fill="none" stroke="#fff" stroke-linejoin="round">
+<rect x="46" y="40" width="28" height="40" rx="1.6" stroke-width="3.6"/>
+<path d="M60 40V80" stroke-width="2.4"/>
+<path d="M51 55l6 -8M51 62l3.5 -4.6" stroke-width="1.6" stroke-linecap="round" opacity=".85"/>
+<path d="M43 83H77" stroke-width="2.6" stroke-linecap="round"/></g></g></svg>
