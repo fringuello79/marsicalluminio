@@ -98,8 +98,9 @@ def cta_band(page):
     <div class="cta-actions">
       <a class="btn" href="contatti.html">Richiedi un sopralluogo</a>
       <div class="tels">
-        <a href="tel:{CO['tel1_raw']}">{CO['tel1']} <span>{CO['ref1']}</span></a>
-        <a href="tel:{CO['tel2_raw']}">{CO['tel2']} <span>{CO['ref2']}</span></a>
+        <a href="tel:{CO['tel1_raw']}">{CO['tel1']}</a>
+        <a href="tel:{CO['tel2_raw']}">{CO['tel2']}</a>
+        <a href="mailto:{CO['email']}">{CO['email']}</a>
       </div>
     </div>
   </div>
@@ -120,8 +121,8 @@ def footer(page):
       </div>
       <div>
         <span class="k">Contatti</span>
-        <p><a href="tel:{CO['tel1_raw']}">{CO['tel1']}</a> · {CO['ref1']}</p>
-        <p><a href="tel:{CO['tel2_raw']}">{CO['tel2']}</a> · {CO['ref2']}</p>
+        <p><a href="tel:{CO['tel1_raw']}">{CO['tel1']}</a></p>
+        <p><a href="tel:{CO['tel2_raw']}">{CO['tel2']}</a></p>
         <p><a href="mailto:{CO['email']}">{CO['email']}</a></p>
         <p class="muted">{CO['hours']}</p>
       </div>

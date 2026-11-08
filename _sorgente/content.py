@@ -12,8 +12,8 @@ CO = {
     "rea": "RM-1778557",
     "capital": "€ 2.000,00 i.v.",
     "email": "marsicalluminio@gmail.com",
-    "tel1": "335 758 4371", "tel1_raw": "+393357584371", "ref1": "Alessandro Felli",
-    "tel2": "377 129 0313", "tel2_raw": "+393771290313", "ref2": "Costantino Alfonsi",
+    "tel1": "335 758 4371", "tel1_raw": "+393357584371",
+    "tel2": "377 129 0313", "tel2_raw": "+393771290313",
     "wa": "https://wa.me/393357584371",
     "hours": "Lunedì–venerdì, 9:00–18:00",
     "area": "Roma e la Marsica",
@@ -745,9 +745,9 @@ def contatti():
   <div>
     <h2>Parla direttamente con noi</h2>
     <div class="people">
-      <div><span class="name">{CO['ref1']}</span><br><a class="tel" href="tel:{CO['tel1_raw']}">{CO['tel1']}</a><br><a href="{CO['wa']}" rel="noopener">Scrivi su WhatsApp</a></div>
-      <div><span class="name">{CO['ref2']}</span><br><a class="tel" href="tel:{CO['tel2_raw']}">{CO['tel2']}</a></div>
-      <div><span class="name">Email</span><br><a href="mailto:{CO['email']}">{CO['email']}</a></div>
+      <div><span class="name">Telefono</span><br><a class="tel" href="tel:{CO['tel1_raw']}">{CO['tel1']}</a><br><a class="tel" href="tel:{CO['tel2_raw']}">{CO['tel2']}</a></div>
+      <div><span class="name">Email</span><br><a class="mail" href="mailto:{CO['email']}">{CO['email']}</a></div>
+      <div><span class="name">WhatsApp</span><br><a href="{CO['wa']}" rel="noopener">Scrivici al {CO['tel1']}</a></div>
     </div>
     <dl class="titleblock collapse" style="--cols:1">
       <div><dt>Orari</dt><dd>{CO['hours']}</dd></div>
@@ -788,7 +788,7 @@ def contatti():
 def grazie():
     return f"""<section class="page-head"><div class="wrap">
 <h1>Richiesta inviata</h1>
-<p class="lead">Grazie. Ti richiamiamo entro un giorno lavorativo per fissare il sopralluogo. Se è urgente, chiama {CO['ref1']} al <a href="tel:{CO['tel1_raw']}">{CO['tel1']}</a>.</p>
+<p class="lead">Grazie. Ti richiamiamo entro un giorno lavorativo per fissare il sopralluogo. Se è urgente, chiamaci al <a href="tel:{CO['tel1_raw']}">{CO['tel1']}</a> o al <a href="tel:{CO['tel2_raw']}">{CO['tel2']}</a>, oppure scrivi a <a href="mailto:{CO['email']}">{CO['email']}</a>.</p>
 <p style="margin-top:28px"><a class="btn ghost" href="./">Torna alla home</a></p>
 </div></section>"""
 
@@ -890,7 +890,7 @@ PAGES = [
      "desc": "Bonus infissi 2026: 50% sull'abitazione principale e 36% sugli altri immobili. Limiti Uw per zona climatica, ENEA, bonifico e documenti.",
      "body": detrazioni},
     {"file": "contatti.html", "title": "Contatti e sopralluogo gratuito · Marsicalluminio",
-     "desc": "Richiedi un sopralluogo gratuito per finestre, porte e scorrevoli in PVC. Alessandro Felli 335 758 4371, Costantino Alfonsi 377 129 0313.",
+     "desc": "Richiedi un sopralluogo gratuito per finestre, porte e scorrevoli in PVC. Telefono 335 758 4371 o 377 129 0313, email marsicalluminio@gmail.com.",
      "body": contatti, "no_cta": True},
     {"file": "privacy.html", "title": "Informativa sulla privacy · Marsicalluminio", "desc": "Informativa sul trattamento dei dati personali.", "body": privacy, "no_cta": True},
     {"file": "cookie.html", "title": "Cookie · Marsicalluminio", "desc": "Informativa sui cookie.", "body": cookie, "no_cta": True},
