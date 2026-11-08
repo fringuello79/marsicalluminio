@@ -15,6 +15,9 @@ from content import PAGES, CO
 HERE = Path(__file__).parent
 OUT = Path(sys.argv[1] if len(sys.argv) > 1 else HERE / "dist")
 
+# Strumento interno per le offerte (accesso con credenziali personali)
+AREA_RISERVATA = "https://marsicalluminio.eu.pythonanywhere.com"
+
 NAV = [
     ("finestre.html", "Finestre"),
     ("scorrevoli.html", "Scorrevoli"),
@@ -152,6 +155,8 @@ def footer(page):
       <div>
         <span class="k">Informazioni legali</span>
         <p><a href="privacy.html">Privacy</a> · <a href="cookie.html">Cookie</a> · <a href="note-legali.html">Note legali</a></p>
+        <span class="k">Area riservata</span>
+        <p><a href="{AREA_RISERVATA}" rel="nofollow">Accesso soci</a></p>
       </div>
       <div>
         <span class="k">Aggiornamento</span>
